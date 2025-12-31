@@ -9,7 +9,7 @@ import ChinaLeaf from '../components/ChinaLeaf.astro';
 const photoCategories = [
   {
     title: 'Early Life & Education',
-    description: 'Photos from Balesa village, school days, and early academic journey',
+    description: 'Photos from Bhalessa village, school days, and early academic journey',
     placeholder: true,
   },
   {
@@ -34,7 +34,7 @@ const photoCategories = [
   },
   {
     title: 'Kashmir & Home',
-    description: 'Balesa, Bhaderwa, and the landscapes of home',
+    description: 'Bhalessa, Bhaderwa, and the landscapes of home',
     placeholder: true,
   },
 ];
@@ -42,7 +42,7 @@ const photoCategories = [
 
 <BaseLayout
   title="Photo Gallery - Abdul Aziz Bhat"
-  description="Visual journey through the life of Abdul Aziz Bhat - from Balesa village to University of Kashmir to international recognition."
+  description="Visual journey through the life of Abdul Aziz Bhat - from Bhalessa village to University of Kashmir to international recognition."
 >
   <Hero
     variant="page"
@@ -112,60 +112,13 @@ const photoCategories = [
           ))}
         </div>
 
-        <SectionDivider icon="shikara" class="mt-20" />
-
-        <!-- Instructions for adding photos -->
-        <div class="mt-16 kashmir-card p-12 bg-kashmir-cream border-l-8 border-kashmir-gold">
-          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-6">
-            📸 Adding Photos to the Gallery
-          </h3>
-          <div class="space-y-4 text-kashmir-lake-blue/90">
-            <p>
-              <strong>To add photos to this gallery:</strong>
-            </p>
-            <ol class="list-decimal list-inside space-y-2 ml-4">
-              <li>Place your photos in: <code class="bg-white px-2 py-1 rounded text-sm">/public/images/gallery/</code></li>
-              <li>Organize by category (early-life, university, family, etc.)</li>
-              <li>Use descriptive filenames (e.g., <code class="bg-white px-2 py-1 rounded text-sm">abbaji-oxford-1980.jpg</code>)</li>
-              <li>Update the <code class="bg-white px-2 py-1 rounded text-sm">gallery.astro</code> file to display them</li>
-            </ol>
-            <p class="mt-6 text-base">
-              <strong>Recommended photo dimensions:</strong> 1200x900px or 4:3 aspect ratio for consistency.
-            </p>
-            <p class="text-base">
-              <strong>Supported formats:</strong> .jpg, .jpeg, .png, .webp
-            </p>
-          </div>
-        </div>
-
-        <!-- Example of how photos will be displayed once added -->
-        <div class="mt-16">
-          <h3 class="text-3xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-            Coming Soon: Interactive Photo Viewer
-          </h3>
-          <div class="kashmir-card p-8 dal-lake-bg text-white text-center">
-            <div class="max-w-2xl mx-auto">
-              <p class="text-lg mb-4">
-                Once photos are added, this gallery will feature:
-              </p>
-              <ul class="text-left space-y-2 text-white/90">
-                <li>✦ Lightbox viewing for larger images</li>
-                <li>✦ Photo captions with dates and context</li>
-                <li>✦ Filtering by category and time period</li>
-                <li>✦ Chronological ordering option</li>
-                <li>✦ Download options for family members</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <div class="mt-16 text-center">
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="/biography" class="btn-primary inline-block no-underline">
               Read His Biography
             </a>
-            <a href="/family" class="btn-secondary inline-block no-underline">
-              Meet the Family
+            <a href="/legacy" class="btn-secondary inline-block no-underline">
+              Explore His Legacy
             </a>
           </div>
         </div>

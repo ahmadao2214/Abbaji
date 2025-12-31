@@ -21,7 +21,7 @@ Place photos in the appropriate folder:
 
 ```
 /public/images/gallery/
-  ├── early-life/        # Childhood, Balesa village, early education
+  ├── early-life/        # Childhood, Bhalessa village, early education
   ├── university/        # University of Kashmir years
   ├── international/     # Oxford, Warwick, travels
   ├── family/            # Family gatherings, celebrations
