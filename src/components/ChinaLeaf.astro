@@ -1,0 +1,89 @@
+---
+interface Props {
+  class?: string;
+  color?: 'burgundy' | 'crimson' | 'gold' | 'outline';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  animate?: boolean;
+}
+
+const {
+  class: className = '',
+  color = 'burgundy',
+  size = 'md',
+  animate = false,
+} = Astro.props;
+
+const colors = {
+  burgundy: '#8B2635',
+  crimson: '#A52A2A',
+  gold: '#D4AF37',
+  outline: 'none',
+};
+
+const sizes = {
+  sm: '24',
+  md: '48',
+  lg: '72',
+  xl: '96',
+};
+
+const fillColor = color === 'outline' ? 'none' : colors[color];
+const strokeColor = color === 'outline' ? colors.burgundy : 'none';
+const strokeWidth = color === 'outline' ? '2' : '0';
+---
+
+<svg
+  class:list={[
+    'chinar-leaf',
+    animate && 'chinar-leaf-float',
+    className
+  ]}
+  width={sizes[size]}
+  height={sizes[size]}
+  viewBox="0 0 100 100"
+  fill={fillColor}
+  stroke={strokeColor}
+  stroke-width={strokeWidth}
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <!-- Chinar Leaf (5-pointed maple-like shape) -->
+  <path d="
+    M 50 5
+    L 55 25 Q 60 30 65 28
+    L 75 20 Q 80 22 78 30
+    L 70 45 Q 72 50 78 52
+    L 90 55 Q 92 60 88 65
+    L 72 68 Q 70 72 72 78
+    L 75 92 Q 72 95 68 92
+    L 58 80 Q 54 82 50 85
+    L 50 85 Q 46 82 42 80
+    L 32 92 Q 28 95 25 92
+    L 28 78 Q 30 72 28 68
+    L 12 65 Q 8 60 10 55
+    L 22 52 Q 28 50 30 45
+    L 22 30 Q 20 22 25 20
+    L 35 28 Q 40 30 45 25
+    Z
+  " />
+
+  <!-- Leaf veins for detail -->
+  <g stroke={color === 'outline' ? strokeColor : 'rgba(0,0,0,0.15)'} stroke-width="1" fill="none">
+    <path d="M 50 85 L 50 25" />
+    <path d="M 50 45 L 35 35" />
+    <path d="M 50 45 L 65 35" />
+    <path d="M 50 60 L 30 65" />
+    <path d="M 50 60 L 70 65" />
+  </g>
+</svg>
+
+<style>
+  .chinar-leaf {
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .chinar-leaf:hover {
+    transform: rotate(5deg) scale(1.05);
+  }
+</style>

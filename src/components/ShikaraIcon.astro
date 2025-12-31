@@ -1,0 +1,154 @@
+---
+interface Props {
+  class?: string;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'simple' | 'ornate';
+  color?: 'burgundy' | 'blue' | 'multi';
+}
+
+const {
+  class: className = '',
+  size = 'md',
+  variant = 'simple',
+  color = 'burgundy',
+} = Astro.props;
+
+const sizes = {
+  sm: { width: '40', height: '24' },
+  md: { width: '60', height: '36' },
+  lg: { width: '80', height: '48' },
+};
+
+const colors = {
+  burgundy: '#8B2635',
+  blue: '#1E3A5F',
+  multi: '#8B2635',
+};
+---
+
+<svg
+  class:list={['shikara-icon', className]}
+  width={sizes[size].width}
+  height={sizes[size].height}
+  viewBox="0 0 100 60"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  {variant === 'simple' && (
+    <>
+      <!-- Water -->
+      <path d="M 0 50 Q 25 47 50 50 T 100 50"
+            stroke="#87CEEB"
+            stroke-width="1.5"
+            fill="none"
+            opacity="0.6" />
+
+      <!-- Boat hull -->
+      <path d="M 15 40 Q 15 45 20 48 L 80 48 Q 85 45 85 40 L 75 35 L 25 35 Z"
+            fill={colors[color]}
+            stroke={colors[color]}
+            stroke-width="1.5" />
+
+      <!-- Boat interior -->
+      <ellipse cx="50" cy="38" rx="22" ry="6"
+               fill="#F8F6F0"
+               opacity="0.8" />
+
+      <!-- Canopy structure -->
+      <path d="M 30 35 Q 30 25 50 22 Q 70 25 70 35"
+            stroke={colors[color]}
+            stroke-width="2"
+            fill="none" />
+
+      <!-- Canopy fabric -->
+      <path d="M 32 34 Q 32 26 50 24 Q 68 26 68 34"
+            fill="#D4AF37"
+            opacity="0.7" />
+
+      <!-- Decorative trim -->
+      <line x1="25" y1="35" x2="75" y2="35"
+            stroke="#D4AF37"
+            stroke-width="1.5" />
+    </>
+  )}
+
+  {variant === 'ornate' && (
+    <>
+      <!-- Water with ripples -->
+      <path d="M 0 50 Q 25 47 50 50 T 100 50"
+            stroke="#87CEEB"
+            stroke-width="1.5"
+            fill="none"
+            opacity="0.6" />
+      <path d="M 0 52 Q 20 50 40 52 T 80 52"
+            stroke="#87CEEB"
+            stroke-width="1"
+            fill="none"
+            opacity="0.4" />
+
+      <!-- Ornate boat hull -->
+      <path d="M 15 40 Q 15 45 20 48 L 80 48 Q 85 45 85 40 L 75 35 L 25 35 Z"
+            fill="#8B2635"
+            stroke="#D4AF37"
+            stroke-width="2" />
+
+      <!-- Decorative patterns on hull -->
+      <circle cx="30" cy="42" r="2" fill="#D4AF37" />
+      <circle cx="42" cy="42" r="2" fill="#D4AF37" />
+      <circle cx="54" cy="42" r="2" fill="#D4AF37" />
+      <circle cx="66" cy="42" r="2" fill="#D4AF37" />
+
+      <!-- Boat interior with cushions -->
+      <ellipse cx="50" cy="38" rx="22" ry="6"
+               fill="#F8F6F0"
+               opacity="0.9" />
+      <circle cx="40" cy="38" r="3" fill="#E8B4B8" opacity="0.8" />
+      <circle cx="52" cy="38" r="3" fill="#E8B4B8" opacity="0.8" />
+      <circle cx="64" cy="38" r="3" fill="#E8B4B8" opacity="0.8" />
+
+      <!-- Ornate canopy structure -->
+      <path d="M 28 35 Q 28 23 50 20 Q 72 23 72 35"
+            stroke="#8B2635"
+            stroke-width="2.5"
+            fill="none" />
+
+      <!-- Canopy fabric with pattern -->
+      <path d="M 30 34 Q 30 25 50 22 Q 70 25 70 34"
+            fill="#4169E1"
+            opacity="0.7" />
+      <path d="M 30 34 Q 30 25 50 22 Q 70 25 70 34"
+            fill="url(#canopy-pattern)"
+            opacity="0.4" />
+
+      <!-- Decorative trim and tassels -->
+      <line x1="25" y1="35" x2="75" y2="35"
+            stroke="#D4AF37"
+            stroke-width="2" />
+
+      <!-- Tassels -->
+      <line x1="32" y1="35" x2="32" y2="40" stroke="#D4AF37" stroke-width="1" />
+      <circle cx="32" cy="40" r="1.5" fill="#D4AF37" />
+      <line x1="50" y1="35" x2="50" y2="40" stroke="#D4AF37" stroke-width="1" />
+      <circle cx="50" cy="40" r="1.5" fill="#D4AF37" />
+      <line x1="68" y1="35" x2="68" y2="40" stroke="#D4AF37" stroke-width="1" />
+      <circle cx="68" cy="40" r="1.5" fill="#D4AF37" />
+
+      <!-- Paddle -->
+      <line x1="12" y1="30" x2="8" y2="15" stroke="#2C5530" stroke-width="1.5" />
+      <ellipse cx="8" cy="12" rx="3" ry="6" fill="#2C5530" />
+    </>
+  )}
+
+  <defs>
+    <pattern id="canopy-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1" fill="#D4AF37" />
+    </pattern>
+  </defs>
+</svg>
+
+<style>
+  .shikara-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>

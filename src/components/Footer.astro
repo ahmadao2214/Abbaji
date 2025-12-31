@@ -1,0 +1,160 @@
+---
+import MountainBackdrop from './MountainBackdrop.astro';
+import KashidaBorder from './KashidaBorder.astro';
+import ChinaLeaf from './ChinaLeaf.astro';
+import ShikaraIcon from './ShikaraIcon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="relative bg-gradient-to-b from-kashmir-cream to-kashmir-stone-grey/20 mt-20">
+  <!-- Top decorative border -->
+  <KashidaBorder variant="floral" height="50px" class="opacity-50" />
+
+  <!-- Mountain backdrop -->
+  <div class="absolute bottom-0 left-0 right-0 opacity-10 pointer-events-none">
+    <MountainBackdrop variant="silhouette" />
+  </div>
+
+  <div class="container-custom relative z-10 py-12">
+    <!-- Main footer content -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <!-- About Section -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <ChinaLeaf size="md" color="burgundy" />
+          <h3 class="text-xl font-serif font-bold text-kashmir-burgundy mb-0">
+            Abdul Aziz Bhat
+          </h3>
+        </div>
+        <p class="text-sm text-kashmir-lake-blue/80 leading-relaxed mb-0">
+          Founding father of the University of Kashmir (1948), educator, scholar, and social worker.
+          A life dedicated to education and service, from Balesa village to international recognition.
+        </p>
+        <p class="text-xs text-kashmir-forest-green/70 mt-2 italic mb-0">
+          "From the rock, we built a university."
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-serif font-bold text-kashmir-burgundy mb-4">
+          Explore
+        </h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="/" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/biography" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Biography
+            </a>
+          </li>
+          <li>
+            <a href="/legacy" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Legacy & Impact
+            </a>
+          </li>
+          <li>
+            <a href="/timeline" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Life Timeline
+            </a>
+          </li>
+          <li>
+            <a href="/gallery" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Photo Gallery
+            </a>
+          </li>
+          <li>
+            <a href="/family" class="text-sm text-kashmir-lake-blue hover:text-kashmir-burgundy transition-colors no-underline flex items-center">
+              <span class="mr-2">→</span>
+              Family
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legacy Section -->
+      <div>
+        <h4 class="text-lg font-serif font-bold text-kashmir-burgundy mb-4">
+          His Legacy
+        </h4>
+        <ul class="space-y-2 text-sm text-kashmir-lake-blue/80">
+          <li class="flex items-start">
+            <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+            <span>Self-taught scholar from Balesa village</span>
+          </li>
+          <li class="flex items-start">
+            <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+            <span>Founding faculty, University of Kashmir (1948)</span>
+          </li>
+          <li class="flex items-start">
+            <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+            <span>Guest lecturer at Oxford & Warwick</span>
+          </li>
+          <li class="flex items-start">
+            <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+            <span>PhD in Education, LLB from AMU</span>
+          </li>
+          <li class="flex items-start">
+            <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+            <span>100 years of life and service (1916-2016)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="section-divider my-8"></div>
+
+    <!-- Bottom footer -->
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-3">
+        <ShikaraIcon size="md" variant="simple" color="burgundy" />
+        <p class="text-sm text-kashmir-lake-blue/70 mb-0">
+          A journey of resilience, education, and transformation
+        </p>
+      </div>
+
+      <p class="text-sm text-kashmir-lake-blue/60 mb-0">
+        © {currentYear} Abdul Aziz Bhat Memorial.
+        <span class="mx-2">•</span>
+        Built with reverence and respect.
+      </p>
+    </div>
+
+    <!-- Decorative chinar leaves at bottom -->
+    <div class="flex justify-center space-x-4 mt-8 opacity-20">
+      <ChinaLeaf size="sm" color="burgundy" />
+      <ChinaLeaf size="sm" color="crimson" />
+      <ChinaLeaf size="sm" color="gold" />
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    position: relative;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--kashmir-burgundy) 50%,
+      transparent 100%
+    );
+  }
+</style>

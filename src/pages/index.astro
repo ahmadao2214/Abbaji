@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import KashidaBorder from '../components/KashidaBorder.astro';
+import ChinaLeaf from '../components/ChinaLeaf.astro';
+import ShikaraIcon from '../components/ShikaraIcon.astro';
+---
+
+<BaseLayout
+  title="Abdul Aziz Bhat (1916-2016) - Founding Father of University of Kashmir"
+  description="Memorial website for Abdul Aziz Bhat, founding father of the University of Kashmir, self-taught scholar from Balesa village, and extraordinary educator who lived 100 years of service."
+>
+  <!-- Hero Section with floating chinar leaves and mountain backdrop -->
+  <Hero
+    variant="home"
+    title="Abdul Aziz Bhat"
+    subtitle="1916-2016 • عبدالعزیز بھٹ • Abbaji"
+    quote="From the rock, we built a university. From tragedy, we created legacy. From one village to the world."
+    quoteAuthor="Abdul Aziz Bhat"
+    imageSrc="/images/abbaji-photo.jpg"
+    imageAlt="Abdul Aziz Bhat - Founding Father of University of Kashmir"
+  />
+
+  <!-- Introduction Section -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="flex justify-center mb-6">
+          <ChinaLeaf size="lg" color="burgundy" />
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-kashmir-burgundy mb-6">
+          A Century of Excellence
+        </h2>
+
+        <p class="text-xl md:text-2xl text-kashmir-lake-blue leading-relaxed mb-6">
+          Born in <strong>1916 in Balesa, Kashmir</strong>, Abdul Aziz Bhat—affectionately known as
+          <em>"Abbaji"</em>—lived an extraordinary 100 years dedicated to education, resilience, and
+          transformation.
+        </p>
+
+        <p class="text-lg md:text-xl text-kashmir-lake-blue/80 leading-relaxed mb-6">
+          He was a <strong>self-taught reader</strong>, one of only <strong>14 people from his village</strong>
+          to become educated. From these humble beginnings, he rose to become a founding faculty member of the
+          <strong>University of Kashmir</strong> in 1948, helping to build it <em>"from the rock"</em>—literally
+          participating in the physical construction and figuratively developing the curriculum for the Education department.
+        </p>
+
+        <p class="text-lg md:text-xl text-kashmir-lake-blue/80 leading-relaxed">
+          His journey took him from the villages of Balesa and Bhaderwa to the halls of
+          <strong>Oxford and Warwick Universities</strong> in England. Despite enduring the tragedy of the 1947
+          Partition, he emerged with unshakable resolve to build Kashmir's educational future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="leaf" />
+
+  <!-- Key Achievements Section -->
+  <section class="section-padding bg-gradient-to-b from-kashmir-cream to-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-kashmir-burgundy mb-4">
+          His Remarkable Journey
+        </h2>
+        <p class="text-xl text-kashmir-lake-blue/80 max-w-3xl mx-auto">
+          From self-taught village scholar to international educator—a life of transformation through learning
+        </p>
+      </div>
+
+      <!-- Achievement Cards in Mughal Garden-inspired grid -->
+      <div class="mughal-grid-3 mb-12">
+        <Card title="Self-Taught Scholar" variant="bordered" showLeafWatermark={true}>
+          <p class="mb-4">
+            Taught himself to read as a child in Balesa village. One of only <strong>14 people from his village</strong>
+            to become educated, alongside Ghulam Rasool Azad.
+          </p>
+          <p class="text-sm italic text-kashmir-forest-green">
+            "Education was not given to me—I claimed it for myself."
+          </p>
+        </Card>
+
+        <Card title="Academic Excellence" variant="bordered" showLeafWatermark={true}>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start">
+              <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+              <span><strong>LLB</strong> from Aligarh Muslim University</span>
+            </li>
+            <li class="flex items-start">
+              <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+              <span><strong>PhD in Education</strong> from University of Kashmir</span>
+            </li>
+            <li class="flex items-start">
+              <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+              <span>Guest Lecturer at <strong>Oxford University</strong>, UK</span>
+            </li>
+            <li class="flex items-start">
+              <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
+              <span>Guest Lecturer at <strong>Warwick University</strong>, UK</span>
+            </li>
+          </ul>
+        </Card>
+
+        <Card title="Founding Father" variant="bordered" showLeafWatermark={true}>
+          <p class="mb-3">
+            <strong>Founding faculty member</strong> of the University of Kashmir in <strong>1948</strong>.
+            Helped build it <em>"from the rock"</em>—both physically and intellectually.
+          </p>
+          <p class="text-sm">
+            Developed curriculum for the Education department and served as Professor, Dean, and Registrar.
+          </p>
+        </Card>
+      </div>
+
+      <!-- Career Highlights -->
+      <div class="mughal-grid mb-12">
+        <Card title="Distinguished Career" variant="gradient">
+          <ul class="space-y-3 text-white/90">
+            <li>✦ Principal, Hari Singh High School (pre-1947)</li>
+            <li>✦ Lecturer, GGM Science College, Jammu (pre-1947)</li>
+            <li>✦ Professor of English & Social Work</li>
+            <li>✦ Dean of Education, University of Kashmir</li>
+            <li>✦ Registrar, University of Kashmir</li>
+            <li>✦ Social Worker throughout his life</li>
+          </ul>
+        </Card>
+
+        <Card title="Resilience & Survival" variant="default" showLeafWatermark={true}>
+          <p class="mb-4">
+            In <strong>1947</strong>, during the Partition violence at age 31, he was shot while holding his
+            infant daughter Masooda. The bullet passed through her and blew off his left thumb. Masooda died;
+            his wife Saideh survived despite injuries.
+          </p>
+          <p class="text-sm font-semibold text-kashmir-burgundy">
+            One year later, in 1948, he founded the University of Kashmir. From tragedy to transformation.
+          </p>
+        </Card>
+      </div>
+
+      <!-- Call to Action with Shikara Journey Metaphor -->
+      <div class="kashmir-card p-12 text-center dal-lake-bg">
+        <div class="flex justify-center mb-6">
+          <ShikaraIcon size="lg" variant="ornate" color="multi" />
+        </div>
+        <h3 class="text-3xl font-serif font-bold text-white mb-4">
+          Journey Through His Life
+        </h3>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          Explore the extraordinary story of a man who turned personal tragedy into educational legacy,
+          who traveled from a Kashmiri village to the world's finest universities, and who lived 100 years
+          of service and dedication.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/biography" class="btn-primary inline-block no-underline">
+            Read His Biography
+          </a>
+          <a href="/timeline" class="bg-white text-kashmir-burgundy px-6 py-3 rounded-lg font-semibold hover:bg-kashmir-cream transition-all duration-300 shadow-md inline-block no-underline">
+            View Life Timeline
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="shikara" />
+
+  <!-- Legacy Highlight Section -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-kashmir-burgundy mb-4">
+            His Enduring Legacy
+          </h2>
+          <p class="text-xl text-kashmir-lake-blue/80">
+            Six children, countless students, and a university built from the rock
+          </p>
+        </div>
+
+        <KashidaBorder variant="floral" height="60px" class="mb-12" />
+
+        <!-- Legacy Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">100</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">Years of Life</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">1916-2016</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">6</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">Children</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">Including engineers, pilots, and more</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">1948</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">University Founded</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">University of Kashmir</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">3</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">Academic Fields</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">English, Social Work, Education</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">2</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">UK Universities</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">Oxford & Warwick</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="text-5xl font-serif font-bold text-kashmir-burgundy mb-2">∞</div>
+            <div class="text-sm uppercase tracking-wide text-kashmir-lake-blue/70">Lives Touched</div>
+            <p class="text-xs text-kashmir-lake-blue/60 mt-2">Generations of students</p>
+          </div>
+        </div>
+
+        <KashidaBorder variant="geometric" height="60px" class="mt-12 mb-8" />
+
+        <div class="text-center">
+          <a href="/legacy" class="btn-secondary inline-block no-underline">
+            Explore His Full Legacy
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="leaf" />
+
+  <!-- Family & Descendants -->
+  <section class="section-padding-sm bg-kashmir-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-kashmir-burgundy mb-6">
+          Generational Impact
+        </h2>
+        <p class="text-lg text-kashmir-lake-blue/80 mb-8">
+          His legacy lives on through his family—engineers, pilots, corporate directors, beauty educators,
+          and technologists continuing his tradition of excellence across the globe.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6 mb-8">
+          <div class="kashmir-card p-6 text-center min-w-[200px]">
+            <h4 class="font-serif font-bold text-kashmir-burgundy mb-2">Altaf</h4>
+            <p class="text-sm text-kashmir-lake-blue/70">Civil Engineer</p>
+          </div>
+          <div class="kashmir-card p-6 text-center min-w-[200px]">
+            <h4 class="font-serif font-bold text-kashmir-burgundy mb-2">Javaid</h4>
+            <p class="text-sm text-kashmir-lake-blue/70">Pilot</p>
+          </div>
+          <div class="kashmir-card p-6 text-center min-w-[200px]">
+            <h4 class="font-serif font-bold text-kashmir-burgundy mb-2">Afzal</h4>
+            <p class="text-sm text-kashmir-lake-blue/70">Surgical Assistant</p>
+          </div>
+        </div>
+
+        <p class="text-base text-kashmir-lake-blue/70 mb-6">
+          <strong>Grandchildren:</strong> Azhar (Senior Software Engineer, Riot Games) • Sanah (Beauty Education)
+          • Shiraz (Director, PwC) • Shabaz (Director, Kimberly-Clark)
+        </p>
+
+        <a href="/family" class="text-kashmir-burgundy hover:text-kashmir-crimson font-semibold underline decoration-kashmir-gold">
+          Meet the Family →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section-padding bg-gradient-to-b from-white to-kashmir-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="flex justify-center mb-6 space-x-4">
+          <ChinaLeaf size="lg" color="burgundy" animate={true} />
+          <ChinaLeaf size="lg" color="gold" animate={true} />
+          <ChinaLeaf size="lg" color="crimson" animate={true} />
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-kashmir-burgundy mb-6">
+          Honoring a Life Well Lived
+        </h2>
+
+        <p class="text-lg text-kashmir-lake-blue/80 mb-8">
+          This website is a tribute to Abdul Aziz Bhat—Abbaji—a man who proved that resilience, education,
+          and dedication can transform not just one life, but generations and entire communities.
+        </p>
+
+        <blockquote class="p-8 bg-white rounded-lg shadow-lg border-l-4 border-kashmir-burgundy mb-8">
+          <p class="text-xl text-kashmir-lake-blue italic mb-4">
+            "Like the ancient chinar trees of Kashmir, his roots ran deep in his homeland,
+            his branches reached across the world, and his legacy provides shade and shelter
+            for generations to come."
+          </p>
+        </blockquote>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/gallery" class="btn-primary inline-block no-underline">
+            View Photo Gallery
+          </a>
+          <a href="/biography" class="btn-secondary inline-block no-underline">
+            Read Full Biography
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import ChinaLeaf from './ChinaLeaf.astro';
+import ShikaraIcon from './ShikaraIcon.astro';
+
+interface Props {
+  class?: string;
+  icon?: 'leaf' | 'shikara' | 'ornament' | 'none';
+}
+
+const {
+  class: className = '',
+  icon = 'ornament',
+} = Astro.props;
+---
+
+<div class:list={['section-divider relative my-16', className]}>
+  {icon === 'leaf' && (
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-kashmir-cream px-4">
+      <ChinaLeaf size="sm" color="gold" />
+    </div>
+  )}
+
+  {icon === 'shikara' && (
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-kashmir-cream px-4">
+      <ShikaraIcon size="sm" variant="simple" color="burgundy" />
+    </div>
+  )}
+
+  {icon === 'ornament' && (
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-kashmir-cream px-4">
+      <span class="text-2xl text-kashmir-gold">✦</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--kashmir-burgundy) 30% 50%,
+      var(--kashmir-gold) 50%,
+      var(--kashmir-burgundy) 50% 70%,
+      transparent 100%
+    );
+    opacity: 0.3;
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import ChinaLeaf from './ChinaLeaf.astro';
+
+interface Props {
+  class?: string;
+  title?: string;
+  href?: string;
+  variant?: 'default' | 'bordered' | 'gradient';
+  showLeafWatermark?: boolean;
+}
+
+const {
+  class: className = '',
+  title,
+  href,
+  variant = 'default',
+  showLeafWatermark = false,
+} = Astro.props;
+
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag
+  href={href}
+  class:list={[
+    'kashmir-card p-6 relative overflow-hidden',
+    variant === 'gradient' && 'dal-lake-bg text-white',
+    variant === 'bordered' && 'border-4 border-kashmir-burgundy/30',
+    href && 'hover:scale-105 cursor-pointer',
+    'transition-all duration-300',
+    className
+  ]}
+>
+  {showLeafWatermark && (
+    <div class="absolute top-0 right-0 opacity-5 -rotate-12">
+      <ChinaLeaf size="xl" color="burgundy" />
+    </div>
+  )}
+
+  {title && (
+    <h3 class:list={[
+      'text-2xl font-serif font-bold mb-4',
+      variant === 'gradient' ? 'text-white' : 'text-kashmir-burgundy'
+    ]}>
+      {title}
+    </h3>
+  )}
+
+  <div class="relative z-10">
+    <slot />
+  </div>
+
+  {href && (
+    <div class="mt-4 flex items-center text-kashmir-gold group-hover:translate-x-2 transition-transform">
+      <span class="text-sm font-semibold">Learn more</span>
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  )}
+</Tag>

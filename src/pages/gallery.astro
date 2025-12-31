@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import ChinaLeaf from '../components/ChinaLeaf.astro';
+
+// Placeholder for future photos - you'll add actual images here
+const photoCategories = [
+  {
+    title: 'Early Life & Education',
+    description: 'Photos from Balesa village, school days, and early academic journey',
+    placeholder: true,
+  },
+  {
+    title: 'University of Kashmir',
+    description: 'Founding years, teaching, and university development',
+    placeholder: true,
+  },
+  {
+    title: 'International Recognition',
+    description: 'Oxford, Warwick, and international academic engagements',
+    placeholder: true,
+  },
+  {
+    title: 'Family Moments',
+    description: 'With wife Saideh, children, and grandchildren',
+    placeholder: true,
+  },
+  {
+    title: 'Later Years',
+    description: 'Continued service and legacy building',
+    placeholder: true,
+  },
+  {
+    title: 'Kashmir & Home',
+    description: 'Balesa, Bhaderwa, and the landscapes of home',
+    placeholder: true,
+  },
+];
+---
+
+<BaseLayout
+  title="Photo Gallery - Abdul Aziz Bhat"
+  description="Visual journey through the life of Abdul Aziz Bhat - from Balesa village to University of Kashmir to international recognition."
+>
+  <Hero
+    variant="page"
+    title="Photo Gallery"
+    subtitle="A Visual Journey Through 100 Years"
+    quote="Every photograph tells a story. Together, they tell a lifetime."
+  />
+
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="flex justify-center mb-6">
+            <ChinaLeaf size="lg" color="burgundy" />
+          </div>
+          <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-4">
+            Capturing a Century
+          </h2>
+          <p class="text-xl text-kashmir-lake-blue/80 max-w-3xl mx-auto">
+            This gallery will showcase photographs documenting Abdul Aziz Bhat's extraordinary 100-year journey—
+            from the villages of Kashmir to the halls of Oxford, from personal tragedy to institutional legacy.
+          </p>
+        </div>
+
+        <SectionDivider icon="leaf" />
+
+        <!-- Photo Categories -->
+        <div class="space-y-16 mt-16">
+          {photoCategories.map((category) => (
+            <div>
+              <h3 class="text-3xl font-serif font-bold text-kashmir-burgundy mb-6">
+                {category.title}
+              </h3>
+              <p class="text-lg text-kashmir-lake-blue/70 mb-8">
+                {category.description}
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Placeholder cards - replace with actual photos */}
+                {[1, 2, 3].map((num) => (
+                  <Card variant="bordered" showLeafWatermark={true}>
+                    <div class="aspect-[4/3] bg-gradient-to-br from-kashmir-cream to-kashmir-stone-grey/20 rounded-lg flex items-center justify-center">
+                      <div class="text-center p-6">
+                        <ChinaLeaf size="lg" color="outline" class="mx-auto mb-3 opacity-30" />
+                        <p class="text-sm text-kashmir-lake-blue/50 italic">
+                          Photo placeholder
+                        </p>
+                        <p class="text-xs text-kashmir-lake-blue/40 mt-2">
+                          Add photos to:<br/>
+                          <code class="bg-white/50 px-2 py-1 rounded text-[10px]">
+                            /public/images/gallery/
+                          </code>
+                        </p>
+                      </div>
+                    </div>
+                    <p class="text-sm text-kashmir-lake-blue/70 mt-4 text-center">
+                      Photo {num} - {category.title}
+                    </p>
+                  </Card>
+                ))}
+              </div>
+
+              {photoCategories.indexOf(category) < photoCategories.length - 1 && (
+                <SectionDivider icon="leaf" class="mt-12" />
+              )}
+            </div>
+          ))}
+        </div>
+
+        <SectionDivider icon="shikara" class="mt-20" />
+
+        <!-- Instructions for adding photos -->
+        <div class="mt-16 kashmir-card p-12 bg-kashmir-cream border-l-8 border-kashmir-gold">
+          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-6">
+            📸 Adding Photos to the Gallery
+          </h3>
+          <div class="space-y-4 text-kashmir-lake-blue/90">
+            <p>
+              <strong>To add photos to this gallery:</strong>
+            </p>
+            <ol class="list-decimal list-inside space-y-2 ml-4">
+              <li>Place your photos in: <code class="bg-white px-2 py-1 rounded text-sm">/public/images/gallery/</code></li>
+              <li>Organize by category (early-life, university, family, etc.)</li>
+              <li>Use descriptive filenames (e.g., <code class="bg-white px-2 py-1 rounded text-sm">abbaji-oxford-1980.jpg</code>)</li>
+              <li>Update the <code class="bg-white px-2 py-1 rounded text-sm">gallery.astro</code> file to display them</li>
+            </ol>
+            <p class="mt-6 text-base">
+              <strong>Recommended photo dimensions:</strong> 1200x900px or 4:3 aspect ratio for consistency.
+            </p>
+            <p class="text-base">
+              <strong>Supported formats:</strong> .jpg, .jpeg, .png, .webp
+            </p>
+          </div>
+        </div>
+
+        <!-- Example of how photos will be displayed once added -->
+        <div class="mt-16">
+          <h3 class="text-3xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
+            Coming Soon: Interactive Photo Viewer
+          </h3>
+          <div class="kashmir-card p-8 dal-lake-bg text-white text-center">
+            <div class="max-w-2xl mx-auto">
+              <p class="text-lg mb-4">
+                Once photos are added, this gallery will feature:
+              </p>
+              <ul class="text-left space-y-2 text-white/90">
+                <li>✦ Lightbox viewing for larger images</li>
+                <li>✦ Photo captions with dates and context</li>
+                <li>✦ Filtering by category and time period</li>
+                <li>✦ Chronological ordering option</li>
+                <li>✦ Download options for family members</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/biography" class="btn-primary inline-block no-underline">
+              Read His Biography
+            </a>
+            <a href="/family" class="btn-secondary inline-block no-underline">
+              Meet the Family
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Future styles for lightbox functionality */
+  .photo-grid-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .photo-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+</style>

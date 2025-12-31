@@ -1,0 +1,115 @@
+---
+interface Props {
+  class?: string;
+  variant?: 'full' | 'silhouette' | 'misty';
+  layers?: number;
+}
+
+const {
+  class: className = '',
+  variant = 'full',
+  layers = 3,
+} = Astro.props;
+---
+
+<div class:list={['mountain-backdrop-container', className]}>
+  {variant === 'full' && (
+    <svg class="mountain-svg" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <!-- Gradient for sky -->
+        <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#2C5F8D;stop-opacity:0.8" />
+          <stop offset="100%" style="stop-color:#1E3A5F;stop-opacity:0.6" />
+        </linearGradient>
+
+        <!-- Gradient for mountains -->
+        <linearGradient id="mountain-gradient-1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#F8F6F0;stop-opacity:1" />
+          <stop offset="30%" style="stop-color:#8B9DAF;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1E3A5F;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+
+      <!-- Sky background -->
+      <rect width="1200" height="400" fill="url(#sky-gradient)" />
+
+      <!-- Back mountains (furthest) -->
+      <path d="M 0 400 L 0 250 Q 150 180 300 200 Q 450 220 600 150 Q 750 100 900 180 Q 1050 220 1200 200 L 1200 400 Z"
+            fill="#1E3A5F"
+            opacity="0.3" />
+
+      <!-- Middle mountains -->
+      <path d="M 0 400 L 0 280 Q 100 220 250 240 Q 400 260 550 200 Q 700 160 850 220 Q 1000 260 1200 240 L 1200 400 Z"
+            fill="#2C5530"
+            opacity="0.5" />
+
+      <!-- Front mountains with snow caps -->
+      <path d="M 0 400 L 0 320 Q 150 260 300 280 L 350 220 L 400 280 Q 550 300 700 250 L 750 200 L 800 250 Q 950 280 1200 300 L 1200 400 Z"
+            fill="url(#mountain-gradient-1)"
+            opacity="0.8" />
+
+      <!-- Snow caps -->
+      <path d="M 340 220 L 350 220 L 355 235 L 345 235 Z" fill="#F8F6F0" />
+      <path d="M 740 200 L 750 200 L 760 220 L 730 220 Z" fill="#F8F6F0" />
+    </svg>
+  )}
+
+  {variant === 'silhouette' && (
+    <svg class="mountain-svg" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <!-- Simple silhouette layers -->
+      <path d="M 0 300 L 0 180 Q 200 120 400 150 Q 600 100 800 140 Q 1000 160 1200 130 L 1200 300 Z"
+            fill="#1E3A5F"
+            opacity="0.15" />
+      <path d="M 0 300 L 0 220 Q 150 180 350 200 Q 600 150 850 190 Q 1050 210 1200 200 L 1200 300 Z"
+            fill="#2C5530"
+            opacity="0.25" />
+      <path d="M 0 300 L 0 240 Q 100 200 300 220 Q 500 180 700 210 Q 900 230 1200 220 L 1200 300 Z"
+            fill="#8B2635"
+            opacity="0.15" />
+    </svg>
+  )}
+
+  {variant === 'misty' && (
+    <svg class="mountain-svg" viewBox="0 0 1200 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <!-- Misty gradient -->
+        <linearGradient id="mist-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#F8F6F0;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#C5D3E0;stop-opacity:0.3" />
+          <stop offset="100%" style="stop-color:#8B9DAF;stop-opacity:0.5" />
+        </linearGradient>
+      </defs>
+
+      <!-- Misty mountains -->
+      <path d="M 0 350 L 0 200 Q 200 140 400 170 Q 600 120 800 160 Q 1000 180 1200 150 L 1200 350 Z"
+            fill="#8B9DAF"
+            opacity="0.2" />
+      <path d="M 0 350 L 0 240 Q 150 190 350 210 Q 600 170 850 200 Q 1050 220 1200 210 L 1200 350 Z"
+            fill="#C5D3E0"
+            opacity="0.3" />
+
+      <!-- Mist overlay -->
+      <rect width="1200" height="350" fill="url(#mist-gradient)" />
+    </svg>
+  )}
+</div>
+
+<style>
+  .mountain-backdrop-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mountain-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Parallax effect support */
+  .mountain-backdrop-container.parallax {
+    will-change: transform;
+  }
+</style>

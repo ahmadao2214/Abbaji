@@ -1,0 +1,123 @@
+---
+import MountainBackdrop from './MountainBackdrop.astro';
+import ChinaLeaf from './ChinaLeaf.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  quote?: string;
+  quoteAuthor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  variant?: 'home' | 'page';
+}
+
+const {
+  title,
+  subtitle,
+  quote,
+  quoteAuthor,
+  imageSrc,
+  imageAlt,
+  variant = 'home',
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden" style={variant === 'home' ? 'min-height: 90vh' : 'min-height: 60vh'}>
+  <!-- Mountain backdrop with gradient overlay -->
+  <div class="absolute inset-0 -z-10">
+    <MountainBackdrop variant="full" class="h-full" />
+    <div class="absolute inset-0 dal-lake-bg opacity-40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-kashmir-cream/50 to-kashmir-cream"></div>
+  </div>
+
+  <!-- Floating chinar leaves (decorative) -->
+  <div class="absolute inset-0 -z-5 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-10 opacity-60">
+      <ChinaLeaf size="lg" color="burgundy" animate={true} />
+    </div>
+    <div class="absolute top-40 right-20 opacity-40" style="animation-delay: 1s">
+      <ChinaLeaf size="md" color="crimson" animate={true} />
+    </div>
+    <div class="absolute top-60 left-1/4 opacity-30" style="animation-delay: 2s">
+      <ChinaLeaf size="lg" color="gold" animate={true} />
+    </div>
+    <div class="absolute top-80 right-1/3 opacity-50" style="animation-delay: 0.5s">
+      <ChinaLeaf size="md" color="burgundy" animate={true} />
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container-custom relative z-10 flex items-center justify-center" style={variant === 'home' ? 'min-height: 90vh' : 'min-height: 60vh'}>
+    <div class="text-center max-w-4xl mx-auto py-20">
+      {imageSrc && (
+        <div class="mb-8 flex justify-center">
+          <div class="relative inline-block">
+            <!-- Kashida-inspired border decoration -->
+            <div class="absolute -inset-4 bg-gradient-to-br from-kashmir-burgundy via-kashmir-gold to-kashmir-burgundy rounded-full opacity-20 blur-xl"></div>
+            <div class="relative">
+              <img
+                src={imageSrc}
+                alt={imageAlt || title}
+                class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-8 border-kashmir-cream ring-4 ring-kashmir-gold/30"
+              />
+              {/* Decorative chinar leaves around photo */}
+              <div class="absolute -top-4 -right-4">
+                <ChinaLeaf size="md" color="burgundy" />
+              </div>
+              <div class="absolute -bottom-4 -left-4">
+                <ChinaLeaf size="md" color="gold" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <h1 class:list={[
+        'font-serif font-bold mb-6',
+        variant === 'home' ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-4xl md:text-5xl lg:text-6xl'
+      ]}>
+        <span class="text-gradient-chinar">{title}</span>
+      </h1>
+
+      {subtitle && (
+        <p class="text-xl md:text-2xl lg:text-3xl text-kashmir-lake-blue font-serif italic mb-8">
+          {subtitle}
+        </p>
+      )}
+
+      {quote && (
+        <blockquote class="mt-12 p-8 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg border-l-4 border-kashmir-gold max-w-2xl mx-auto">
+          <p class="text-lg md:text-xl text-kashmir-lake-blue italic leading-relaxed mb-4">
+            "{quote}"
+          </p>
+          {quoteAuthor && (
+            <cite class="text-sm md:text-base text-kashmir-burgundy font-semibold not-italic">
+              — {quoteAuthor}
+            </cite>
+          )}
+        </blockquote>
+      )}
+
+      {variant === 'home' && (
+        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/biography" class="btn-primary inline-block no-underline">
+            Discover His Life
+          </a>
+          <a href="/legacy" class="btn-secondary inline-block no-underline">
+            Explore His Legacy
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Scroll indicator (only for home variant) -->
+  {variant === 'home' && (
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-kashmir-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  )}
+</section>

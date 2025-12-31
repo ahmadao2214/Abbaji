@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+
+const timelineEvents = [
+  {
+    year: '1916',
+    title: 'Born in Balesa, Kashmir',
+    description: 'Abdul Aziz Bhat born in the small village of Balesa, Kashmir. He would become one of only 14 people from his village to become educated.',
+    category: 'personal' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    year: 'Early 1920s',
+    title: 'Self-Taught Reader',
+    description: 'As a young child, Abdul Aziz teaches himself to read—an extraordinary act of will that would define his entire life.',
+    category: 'education' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    year: '1930s',
+    title: 'Balesa Village School',
+    description: 'Attends Balesa village school for formal education while continuing his self-directed learning journey.',
+    category: 'education' as const,
+  },
+  {
+    year: 'Late 1930s',
+    title: 'Bhaderwa Degree College',
+    description: 'Pursues higher education at Bhaderwa Degree College, Kashmir, expanding his academic horizons.',
+    category: 'education' as const,
+  },
+  {
+    year: 'Early 1940s',
+    title: 'GGM Science College, Jammu',
+    description: 'Studies at GGM Science College in Jammu, demonstrating academic excellence and beginning his teaching career.',
+    category: 'education' as const,
+  },
+  {
+    year: 'Mid-1940s',
+    title: 'Principal - Hari Singh High School',
+    description: 'Appointed Principal of Hari Singh High School, demonstrating leadership and educational vision at a young age.',
+    category: 'career' as const,
+  },
+  {
+    year: 'Mid-1940s',
+    title: 'Lecturer - GGM Science College',
+    description: 'Serves as Lecturer at GGM Science College, Jammu, bringing his expertise to higher education.',
+    category: 'career' as const,
+  },
+  {
+    year: 'Late 1940s',
+    title: 'LLB from Aligarh Muslim University',
+    description: 'Earns Bachelor of Laws degree from prestigious Aligarh Muslim University, expanding his academic credentials.',
+    category: 'education' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    year: '1947',
+    title: 'Jammu Massacre - Tragedy & Survival',
+    description: 'At age 31, shot during Partition violence while holding infant daughter Masooda. She dies; he loses his left thumb. Wife Saideh injured but survives. One of the darkest moments of his life.',
+    category: 'personal' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    year: '1948',
+    title: 'Founding Faculty - University of Kashmir',
+    description: 'Just one year after tragedy, becomes founding faculty member of University of Kashmir. Helps build it "from the rock"—both physically and intellectually. Develops curriculum for Education department.',
+    category: 'achievement' as const,
+    icon: 'shikara' as const,
+  },
+  {
+    year: '1950s',
+    title: 'Professor of English & Social Work',
+    description: 'Establishes himself as Professor in multiple disciplines, teaching thousands of students and pioneering social work education.',
+    category: 'career' as const,
+  },
+  {
+    year: '1955',
+    title: 'Birth of Son Afzal',
+    description: 'Youngest son Afzal born, who would later become a Surgical Assistant.',
+    category: 'personal' as const,
+  },
+  {
+    year: '1960s',
+    title: 'Dean of Education',
+    description: 'Appointed Dean of Education at University of Kashmir, shaping the pedagogical direction of the institution.',
+    category: 'career' as const,
+  },
+  {
+    year: '1970s',
+    title: 'Registrar of University',
+    description: 'Rises to the position of Registrar, taking on administrative leadership of the entire University of Kashmir.',
+    category: 'career' as const,
+    icon: 'shikara' as const,
+  },
+  {
+    year: '1970s',
+    title: 'PhD in Education',
+    description: 'Earns PhD in Education from the very university he helped found—the University of Kashmir.',
+    category: 'education' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    year: '1980s',
+    title: 'Guest Lecturer - Oxford University',
+    description: 'Invited as Guest Lecturer to Oxford University, UK. A self-taught scholar from Balesa village now teaching at one of the world\'s most prestigious institutions.',
+    category: 'achievement' as const,
+    icon: 'shikara' as const,
+  },
+  {
+    year: '1980s',
+    title: 'Guest Lecturer - Warwick University',
+    description: 'Serves as Guest Lecturer at Warwick University, UK, sharing his expertise in education and social work internationally.',
+    category: 'achievement' as const,
+    icon: 'shikara' as const,
+  },
+  {
+    year: '1990s-2000s',
+    title: 'Elder Statesman & Continued Service',
+    description: 'Continues his commitment to education and social work into his 80s and 90s, remaining active and engaged with his community.',
+    category: 'career' as const,
+  },
+  {
+    year: '2016',
+    title: 'A Century Complete',
+    description: 'Abdul Aziz Bhat passes away at age 100, having lived through an entire century of Kashmir\'s history. His legacy lives on through thousands of students, six children, many grandchildren, and the University he helped build.',
+    category: 'personal' as const,
+    icon: 'shikara' as const,
+  },
+];
+---
+
+<BaseLayout
+  title="Life Timeline - Abdul Aziz Bhat"
+  description="Journey through the 100-year life of Abdul Aziz Bhat, from Balesa village to international recognition."
+>
+  <Hero
+    variant="page"
+    title="A Century of Life"
+    subtitle="The Journey of Abdul Aziz Bhat (1916-2016)"
+    quote="From one village to the world. From tragedy to transformation. From the rock to a university."
+  />
+
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-xl text-kashmir-lake-blue/80 max-w-3xl mx-auto">
+            Follow the remarkable journey of a self-taught scholar who lived 100 years of resilience,
+            education, and service. Like a shikara traveling Dal Lake, his life navigated calm waters
+            and turbulent storms, always moving forward.
+          </p>
+        </div>
+
+        <Timeline events={timelineEvents} />
+
+        <SectionDivider icon="leaf" />
+
+        <div class="mt-16 text-center">
+          <div class="kashmir-card p-12 dal-lake-bg text-white">
+            <h3 class="text-3xl font-serif font-bold mb-4">100 Years, Countless Lives Touched</h3>
+            <p class="text-xl mb-6">
+              From 1916 to 2016, Abdul Aziz Bhat witnessed and shaped a century of history.
+            </p>
+            <p class="text-lg text-white/90 mb-8">
+              His journey from Balesa village to Oxford University, from personal tragedy to institutional
+              legacy, stands as a testament to the power of education, resilience, and unwavering dedication.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="/biography" class="bg-white text-kashmir-burgundy px-6 py-3 rounded-lg font-semibold hover:bg-kashmir-cream transition-all duration-300 shadow-md inline-block no-underline">
+                Read Full Biography
+              </a>
+              <a href="/legacy" class="bg-kashmir-burgundy text-white px-6 py-3 rounded-lg font-semibold hover:bg-kashmir-crimson transition-all duration-300 shadow-md border-2 border-kashmir-gold inline-block no-underline">
+                Explore His Legacy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

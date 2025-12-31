@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import KashidaBorder from '../components/KashidaBorder.astro';
+import ChinaLeaf from '../components/ChinaLeaf.astro';
+---
+
+<BaseLayout
+  title="Legacy & Impact - Abdul Aziz Bhat"
+  description="The lasting legacy of Abdul Aziz Bhat - founding father of University of Kashmir, educator of thousands, and inspiration for generations."
+>
+  <Hero
+    variant="page"
+    title="His Enduring Legacy"
+    subtitle="Generations Transformed Through Education"
+    quote="The true measure of a life is not in years lived, but in lives touched."
+  />
+
+  <!-- Educational Legacy -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-12 text-center">
+          Educational Impact
+        </h2>
+
+        <div class="mughal-grid-3 gap-8">
+          <Card title="University of Kashmir" variant="bordered" showLeafWatermark={true}>
+            <p class="mb-4">
+              <strong>Founding faculty member (1948)</strong> - helped build the institution from the ground up,
+              both physically and academically.
+            </p>
+            <p class="text-sm text-kashmir-lake-blue/70">
+              Developed curriculum for Education department, trained countless teachers, shaped Kashmir's
+              educational landscape for generations.
+            </p>
+          </Card>
+
+          <Card title="Thousands of Students" variant="bordered" showLeafWatermark={true}>
+            <p class="mb-4">
+              As <strong>Professor, Dean, and Registrar</strong>, he directly influenced thousands of students
+              over decades of teaching.
+            </p>
+            <p class="text-sm text-kashmir-lake-blue/70">
+              His students became teachers, leaders, and changemakers throughout Kashmir and beyond.
+            </p>
+          </Card>
+
+          <Card title="Social Work Pioneer" variant="bordered" showLeafWatermark={true}>
+            <p class="mb-4">
+              Pioneered <strong>social work education</strong> at the University of Kashmir, creating programs
+              that continue today.
+            </p>
+            <p class="text-sm text-kashmir-lake-blue/70">
+              Combined academic excellence with community service—education as transformation.
+            </p>
+          </Card>
+        </div>
+
+        <div class="mt-12 kashmir-card p-10 dal-lake-bg text-white text-center">
+          <h3 class="text-3xl font-serif font-bold mb-4">From One Village to Thousands</h3>
+          <p class="text-xl mb-4">
+            He was one of only <strong>14 people from Balesa</strong> to become educated.
+          </p>
+          <p class="text-lg text-white/90">
+            Through his work, he made higher education accessible to <strong>thousands of Kashmiris</strong>,
+            breaking the cycle of illiteracy one student at a time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="leaf" />
+
+  <!-- International Recognition -->
+  <section class="section-padding bg-kashmir-cream">
+    <div class="container-custom max-w-5xl mx-auto">
+      <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-12 text-center">
+        International Recognition
+      </h2>
+
+      <div class="mughal-grid gap-8">
+        <Card title="Oxford University" variant="gradient">
+          <p class="text-white/90 text-lg mb-3">Guest Lecturer</p>
+          <p class="text-white/80">
+            Brought Kashmiri perspectives and educational expertise to one of the world's most prestigious
+            universities.
+          </p>
+        </Card>
+
+        <Card title="Warwick University" variant="gradient">
+          <p class="text-white/90 text-lg mb-3">Guest Lecturer</p>
+          <p class="text-white/80">
+            Shared decades of experience in education and social work with British academic community.
+          </p>
+        </Card>
+      </div>
+
+      <p class="text-center text-lg text-kashmir-lake-blue/80 mt-12 italic">
+        "A self-taught scholar from a Kashmiri village stood as an equal among the world's finest academic minds."
+      </p>
+    </div>
+  </section>
+
+  <SectionDivider icon="shikara" />
+
+  <!-- Family Legacy -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-5xl mx-auto">
+      <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-12 text-center">
+        Generational Legacy
+      </h2>
+
+      <div class="space-y-8">
+        <Card title="His Children" variant="bordered">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-kashmir-burgundy mb-2">Sons:</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Altaf</strong> - Civil Engineer</li>
+                <li><strong>Javaid</strong> - Pilot</li>
+                <li><strong>Afzal</strong> - Surgical Assistant</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-kashmir-burgundy mb-2">Daughters:</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Yasmeen</strong></li>
+                <li><strong>Shaheen</strong></li>
+                <li><strong>Masooda</strong> - Died as infant (1947)</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+
+        <Card title="His Grandchildren - Global Impact" variant="bordered" showLeafWatermark={true}>
+          <p class="mb-4">His legacy continues through grandchildren making impacts worldwide:</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-kashmir-cream/50 p-4 rounded-lg">
+              <p class="font-semibold text-kashmir-burgundy">Azhar</p>
+              <p class="text-sm text-kashmir-lake-blue/70">Senior Software Engineer, Riot Games</p>
+            </div>
+            <div class="bg-kashmir-cream/50 p-4 rounded-lg">
+              <p class="font-semibold text-kashmir-burgundy">Shiraz</p>
+              <p class="text-sm text-kashmir-lake-blue/70">Director, PwC</p>
+            </div>
+            <div class="bg-kashmir-cream/50 p-4 rounded-lg">
+              <p class="font-semibold text-kashmir-burgundy">Shabaz</p>
+              <p class="text-sm text-kashmir-lake-blue/70">Director, Kimberly-Clark</p>
+            </div>
+            <div class="bg-kashmir-cream/50 p-4 rounded-lg">
+              <p class="font-semibold text-kashmir-burgundy">Sanah</p>
+              <p class="text-sm text-kashmir-lake-blue/70">Beauty Education</p>
+            </div>
+          </div>
+        </Card>
+
+        <div class="kashmir-card p-10 bg-gradient-to-br from-kashmir-burgundy to-kashmir-crimson text-white text-center">
+          <h3 class="text-3xl font-serif font-bold mb-4">Three Generations of Excellence</h3>
+          <p class="text-xl mb-4">
+            From Balesa village to global corporations and institutions
+          </p>
+          <p class="text-lg text-white/90">
+            Engineers • Pilots • Medical professionals • Corporate directors • Technologists • Educators
+          </p>
+          <div class="flex justify-center space-x-4 mt-8">
+            <ChinaLeaf size="md" color="gold" />
+            <ChinaLeaf size="md" color="crimson" />
+            <ChinaLeaf size="md" color="gold" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="leaf" />
+
+  <!-- Values & Philosophy -->
+  <section class="section-padding bg-kashmir-cream">
+    <div class="container-custom max-w-4xl mx-auto">
+      <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-12 text-center">
+        Core Values & Philosophy
+      </h2>
+
+      <div class="space-y-6">
+        <div class="kashmir-card p-8 border-l-8 border-kashmir-burgundy">
+          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-3">Self-Determination</h3>
+          <p class="text-kashmir-lake-blue/90">
+            <em>"Education was not given to me—I claimed it for myself."</em> He proved that circumstances
+            don't determine destiny; determination does.
+          </p>
+        </div>
+
+        <div class="kashmir-card p-8 border-l-8 border-kashmir-gold">
+          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-3">Resilience</h3>
+          <p class="text-kashmir-lake-blue/90">
+            One year after losing his daughter and nearly his own life, he was building a university.
+            Tragedy became fuel for transformation.
+          </p>
+        </div>
+
+        <div class="kashmir-card p-8 border-l-8 border-kashmir-forest-green">
+          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-3">Service</h3>
+          <p class="text-kashmir-lake-blue/90">
+            A lifetime dedicated to social work and education—believing that knowledge should uplift
+            entire communities, not just individuals.
+          </p>
+        </div>
+
+        <div class="kashmir-card p-8 border-l-8 border-kashmir-royal-blue">
+          <h3 class="text-2xl font-serif font-bold text-kashmir-burgundy mb-3">Excellence</h3>
+          <p class="text-kashmir-lake-blue/90">
+            From village school to Oxford University—never settling, always reaching higher, always
+            learning more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider icon="shikara" />
+
+  <!-- Lasting Impact -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8">
+        The Measure of a Life
+      </h2>
+
+      <blockquote class="p-12 bg-kashmir-cream rounded-lg shadow-xl border-l-8 border-kashmir-burgundy mb-12">
+        <p class="text-2xl text-kashmir-lake-blue italic leading-relaxed">
+          "Like the ancient chinar trees that stand for centuries in Kashmir's valleys, Abdul Aziz Bhat's
+          roots ran deep in his homeland. His branches reached across the world. And his legacy provides
+          shade and shelter for generations to come."
+        </p>
+      </blockquote>
+
+      <KashidaBorder variant="floral" height="60px" class="my-12" />
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div class="text-center">
+          <p class="text-5xl font-serif font-bold text-kashmir-burgundy">100</p>
+          <p class="text-sm text-kashmir-lake-blue/70 mt-2">Years of Life</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-serif font-bold text-kashmir-burgundy">75+</p>
+          <p class="text-sm text-kashmir-lake-blue/70 mt-2">Years of Service</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-serif font-bold text-kashmir-burgundy">1000s</p>
+          <p class="text-sm text-kashmir-lake-blue/70 mt-2">Students Taught</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-serif font-bold text-kashmir-burgundy">∞</p>
+          <p class="text-sm text-kashmir-lake-blue/70 mt-2">Legacy</p>
+        </div>
+      </div>
+
+      <div class="flex justify-center space-x-4 mb-8">
+        <ChinaLeaf size="lg" color="burgundy" animate={true} />
+        <ChinaLeaf size="lg" color="gold" animate={true} />
+        <ChinaLeaf size="lg" color="crimson" animate={true} />
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/biography" class="btn-primary inline-block no-underline">
+          Read His Biography
+        </a>
+        <a href="/family" class="btn-secondary inline-block no-underline">
+          Meet the Family
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

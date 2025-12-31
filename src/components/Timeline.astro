@@ -1,0 +1,136 @@
+---
+import ShikaraIcon from './ShikaraIcon.astro';
+import ChinaLeaf from './ChinaLeaf.astro';
+
+interface TimelineEvent {
+  year: string;
+  title: string;
+  description: string;
+  category?: 'education' | 'career' | 'personal' | 'achievement';
+  icon?: 'leaf' | 'shikara';
+}
+
+interface Props {
+  events: TimelineEvent[];
+  class?: string;
+}
+
+const { events, class: className = '' } = Astro.props;
+
+const categoryColors = {
+  education: 'border-kashmir-royal-blue bg-kashmir-royal-blue',
+  career: 'border-kashmir-burgundy bg-kashmir-burgundy',
+  personal: 'border-kashmir-forest-green bg-kashmir-forest-green',
+  achievement: 'border-kashmir-gold bg-kashmir-gold',
+};
+---
+
+<div class:list={['timeline-container', className]}>
+  <div class="relative">
+    {/* Timeline line */}
+    <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-kashmir-burgundy via-kashmir-gold to-kashmir-lake-blue transform md:-translate-x-1/2"></div>
+
+    {/* Timeline events */}
+    <div class="space-y-12">
+      {events.map((event, index) => (
+        <div class:list={[
+          'timeline-event relative',
+          index % 2 === 0 ? 'md:text-right' : 'md:text-left'
+        ]}>
+          <div class:list={[
+            'md:w-1/2',
+            index % 2 === 0 ? 'md:pr-16' : 'md:ml-auto md:pl-16'
+          ]}>
+            <div class="pl-20 md:pl-0">
+              {/* Year badge */}
+              <div class:list={[
+                'inline-block px-4 py-2 rounded-full font-serif font-bold text-white mb-3 shadow-lg',
+                event.category ? categoryColors[event.category] : 'bg-kashmir-burgundy'
+              ]}>
+                {event.year}
+              </div>
+
+              {/* Event card */}
+              <div class="kashmir-card p-6 hover:shadow-2xl transition-all duration-300">
+                <h3 class="text-xl font-serif font-bold text-kashmir-burgundy mb-3">
+                  {event.title}
+                </h3>
+                <p class="text-kashmir-lake-blue/90 leading-relaxed mb-0">
+                  {event.description}
+                </p>
+
+                {/* Category indicator */}
+                {event.category && (
+                  <div class="mt-4 inline-flex items-center text-xs font-semibold text-kashmir-lake-blue/70">
+                    <span class:list={[
+                      'w-2 h-2 rounded-full mr-2',
+                      event.category ? categoryColors[event.category] : 'bg-kashmir-burgundy'
+                    ]}></span>
+                    {event.category.charAt(0).toUpperCase() + event.category.slice(1)}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline icon */}
+          <div class="absolute left-8 md:left-1/2 top-8 transform md:-translate-x-1/2 -translate-y-1/2">
+            <div class="w-12 h-12 rounded-full bg-kashmir-cream shadow-lg flex items-center justify-center border-4 border-kashmir-gold">
+              {event.icon === 'shikara' ? (
+                <ShikaraIcon size="sm" variant="simple" color="burgundy" />
+              ) : (
+                <ChinaLeaf size="sm" color="burgundy" />
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Journey metaphor - Shikara at the end */}
+    <div class="relative mt-12">
+      <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2">
+        <div class="w-16 h-16 rounded-full bg-kashmir-cream shadow-xl flex items-center justify-center border-4 border-kashmir-burgundy">
+          <ShikaraIcon size="md" variant="ornate" color="multi" />
+        </div>
+      </div>
+      <div class="text-center pt-12">
+        <p class="text-sm italic text-kashmir-lake-blue/70">
+          A century of life, learning, and legacy
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .timeline-event {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .timeline-event:nth-child(1) { animation-delay: 0.1s; }
+  .timeline-event:nth-child(2) { animation-delay: 0.2s; }
+  .timeline-event:nth-child(3) { animation-delay: 0.3s; }
+  .timeline-event:nth-child(4) { animation-delay: 0.4s; }
+  .timeline-event:nth-child(5) { animation-delay: 0.5s; }
+  .timeline-event:nth-child(n+6) { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-event {
+      animation: none;
+      opacity: 1;
+    }
+  }
+</style>
