@@ -12,9 +12,9 @@ interface Props {
 
 const {
   title,
-  description = 'Memorial website for Abdul Aziz Bhat (1916-2016), founding father of the University of Kashmir and extraordinary educator.',
+  description = 'Memorial website for Abdul Aziz Butt (1916-2016), founding father of the University of Kashmir and extraordinary educator.',
   image = '/images/abbaji-og.jpg',
-  keywords = 'Abdul Aziz Bhat, University of Kashmir, Kashmir education, Bhalessa, educator, academic legacy',
+  keywords = 'Abdul Aziz Butt, University of Kashmir, Kashmir education, Bhalessa, educator, academic legacy',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -42,7 +42,7 @@ const socialImage = new URL(image, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:site_name" content="Abdul Aziz Bhat Memorial" />
+    <meta property="og:site_name" content="Abdul Aziz Butt Memorial" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -66,7 +66,7 @@ const socialImage = new URL(image, Astro.site);
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Abdul Aziz Bhat",
+        "name": "Abdul Aziz Butt",
         "alternateName": "Abbaji",
         "birthDate": "1916",
         "deathDate": "2016",

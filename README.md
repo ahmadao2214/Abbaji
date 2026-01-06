@@ -1,10 +1,10 @@
-# Abdul Aziz Bhat Memorial Website
+# Abdul Aziz Butt Memorial Website
 
-A beautiful, culturally-rooted memorial website honoring **Abdul Aziz Bhat (1916-2016)**, founding father of the University of Kashmir and extraordinary educator.
+A beautiful, culturally-rooted memorial website honoring **Abdul Aziz Butt (1916-2016)**, founding father of the University of Kashmir and extraordinary educator.
 
 ## 🍂 About This Project
 
-This website celebrates the 100-year life of Abdul Aziz Bhat (affectionately known as "Abbaji"), integrating Kashmir's rich visual heritage through:
+This website celebrates the 100-year life of Abdul Aziz Butt (affectionately known as "Abbaji"), integrating Kashmir's rich visual heritage through:
 
 - **Chinar leaves** - Kashmir's iconic autumn symbol
 - **Kashida embroidery** - Traditional needlework patterns
@@ -284,12 +284,12 @@ This is a personal memorial website. Content is private family history.
 
 ## 🙏 Acknowledgments
 
-Built with love and respect for **Abdul Aziz Bhat (Abbaji)** - a century of life, resilience, and service to education.
+Built with love and respect for **Abdul Aziz Butt (Abbaji)** - a century of life, resilience, and service to education.
 
 ---
 
 **"From the rock, we built a university. From tragedy, we created legacy. From one village to the world."**
 
-*— Abdul Aziz Bhat (1916-2016)*
+*— Abdul Aziz Butt (1916-2016)*
 
 🍂 **عبدالعزیز بھٹ** 🍂

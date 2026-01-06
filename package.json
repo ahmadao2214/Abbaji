@@ -2,7 +2,7 @@
   "name": "abbaji-memorial",
   "type": "module",
   "version": "1.0.0",
-  "description": "Memorial website for Abdul Aziz Bhat - Founding Father of University of Kashmir",
+  "description": "Memorial website for Abdul Aziz Butt - Founding Father of University of Kashmir",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
