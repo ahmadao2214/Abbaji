@@ -9,10 +9,11 @@ interface Props {
 const { n, status } = Astro.props;
 ---
 
-<aside class="sidenote" id={`note-${n}`}>
+<li class="endnote" id={`note-${n}`} data-status={status}>
   <p>
-    <a class="sidenote-back" href={`#ref-${n}`}>{n}</a>
+    <span class="endnote-num">{n}.</span>
     <span class="label">{statusLabel[status]}</span>
     <slot />
+    <a class="endnote-back" href={`#ref-${n}`} aria-label={`Back to note ${n} in text`}>↩</a>
   </p>
-</aside>
+</li>

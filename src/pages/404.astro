@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Prose from '../components/Prose.astro';
+---
+
+<BaseLayout
+  title="Page not found · Abdul Aziz Butt"
+  description="The page you requested could not be found."
+  noindex={true}
+>
+  <Prose>
+    <h1 class="role-title">Page not found</h1>
+    <p class="role-lede">This page is not in the register.</p>
+    <p>
+      Return to the <a href="/">title page</a>, read <a href="/biography">the life</a>, browse
+      <a href="/timeline">the register</a>, or check <a href="/sources">the sources</a>.
+    </p>
+  </Prose>
+</BaseLayout>

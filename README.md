@@ -24,14 +24,13 @@ Every claim distinguishes between **public record**, **his own account**, **fami
 │   ├── components/
 │   │   ├── Chapter.astro      # Place-and-years chapter section
 │   │   ├── CivilListLine.astro# Quoted Civil List / Calendar register lines
-│   │   ├── Entry.astro        # Dated register entry row
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Inscription.astro  # Family saying block
 │   │   ├── Memory.astro       # Explicitly labelled family-memory block
-│   │   ├── Note.astro         # Margin source note
-│   │   ├── Prose.astro        # Reading column + margin layout
-│   │   └── Ref.astro          # Inline reference anchor to /sources
+│   │   ├── Note.astro         # Collapsible endnote item
+│   │   ├── Prose.astro        # Reading column layout
+│   │   └── Ref.astro          # Inline superscript reference to endnotes
 │   ├── data/
 │   │   ├── chapters.ts        # Chapter metadata & table of contents
 │   │   ├── register.ts        # Chronological register entries

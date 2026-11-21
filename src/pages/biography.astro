@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Prose from '../components/Prose.astro';
 import Chapter from '../components/Chapter.astro';
-import Entry from '../components/Entry.astro';
 import Note from '../components/Note.astro';
 import Memory from '../components/Memory.astro';
 import CivilListLine from '../components/CivilListLine.astro';
@@ -28,333 +27,303 @@ import { site } from '../data/site';
     <Chapter id="kilhotran" years="1916–1938" place="Kilhotran, Bhalessa and Bhaderwah" />
 
     <div class="prose-stack">
-      <Entry>
+      <p>
+        Abdul Aziz Butt was born on 26 July 1916 at Kilhotran, a village in Bhalessa, in what is now Doda
+        district. Education was rare there.<Ref n={1} />
+      </p>
+
+      <Memory>
         <p>
-          Abdul Aziz Butt was born on 26 July 1916 at Kilhotran, a village in Bhalessa, in what is now Doda
-          district. Education was rare there.
-          <Ref n={1} />
+          His father’s name, as the family remembers it, was Muhammad Sultan.<Ref n={2} />
         </p>
-        <Note slot="notes" n={1} status="record">
-          Civil List No. 127, and the same date in the lists of 1947 and about 1953. Two later books give 26 July 1916 as well.
-        </Note>
-      </Entry>
+      </Memory>
 
-      <Entry>
-        <Memory>
-          <p>
-            His father’s name, as the family remembers it, was Muhammad Sultan.
-            <Ref n={2} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={2} status="family-memory">
-          Recorded by the family on 11 November 2026. A father’s name printed in one local history is not used here.
-        </Note>
-      </Entry>
+      <p>
+        He went to the primary school at Kilhotran, and was in the first group of boys from Bhalessa admitted
+        to the school at Bhaderwah. Ghulam Rasool Azad was his classmate from childhood to the tenth class.
+        A local history calls him the first M.A. of this place.<Ref n={3} />
+      </p>
+      <p>His early life ran between Bhalessa and Bhaderwah.</p>
 
-      <Entry>
+      <Memory>
+        <p>He was the first person from his village to be educated.</p>
         <p>
-          He went to the primary school at Kilhotran, and was in the first group of boys from Bhalessa admitted
-          to the school at Bhaderwah. Ghulam Rasool Azad was his classmate from childhood to the tenth class.
-          A local history calls him the first M.A. of this place.
-          <Ref n={3} />
+          The family remembers that he taught himself to read, and that he travelled long distances and shut
+          himself away in rooms to study.<Ref n={4} />
         </p>
-        <p>His early life ran between Bhalessa and Bhaderwah.</p>
-        <Note slot="notes" n={3} status="own-account">
-          Bashir Bhadarwahi, <cite>The History and Culture of Bhadarwah</cite> (2023), pp. 671 and 774–775.
-        </Note>
-      </Entry>
+      </Memory>
 
-      <Entry>
-        <Memory>
-          <p>He was the first person from his village to be educated.</p>
-          <p>
-            The family remembers that he taught himself to read, and that he travelled long distances and shut
-            himself away in rooms to study.
-            <Ref n={4} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={4} status="family-memory">
-          The family corrected an earlier count of fourteen educated people in the village. The count is not used.
-        </Note>
-      </Entry>
-
-      <Entry>
-        <p>
-          In 1938 he took his B.A. at Prince of Wales College, Jammu, now Government Gandhi Memorial Science College.
-          <Ref n={5} />
-        </p>
-        <Note slot="notes" n={5} status="own-account">
-          The Bhadarwah history. No opened record shows him as a student of the Bhaderwah degree college, which did not yet exist.
-        </Note>
-      </Entry>
+      <p>
+        In 1938 he took his B.A. at Prince of Wales College, Jammu, now Government Gandhi Memorial Science College.<Ref n={5} />
+      </p>
     </div>
 
     <Chapter id="aligarh" years="1938–1947" place="Aligarh, Kishtwar and Mirpur" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>
-          After 1938 he took an M.A. in Arabic and an LL.B. at Aligarh Muslim University. Those degrees are his
-          own account. He also took the B.T., a teaching degree, and Munshi Fazil in the first class.
-          <Ref n={6} />
-        </p>
-        <Note slot="notes" n={6} status="own-account">
-          The Bhadarwah history, drawing on what he told its author. No university register was opened.
-        </Note>
-      </Entry>
+      <p>
+        After 1938 he took an M.A. in Arabic and an LL.B. at Aligarh Muslim University. Those degrees are his
+        own account. He also took the B.T., a teaching degree, and Munshi Fazil in the first class.<Ref n={6} />
+      </p>
 
-      <Entry>
-        <p>
-          He joined the state’s education service in 1941 as Second Teacher at Kishtwar High School. That was
-          the start of thirty-three years in the service.
-          <Ref n={7} />
-        </p>
-        <Note slot="notes" n={7} status="record">
-          Civil List No. 127 dates his entry into service to about May or June 1941. The Bhadarwah history names the Kishtwar post.
-        </Note>
-      </Entry>
+      <p>
+        He joined the state’s education service in 1941 as Second Teacher at Kishtwar High School. That was
+        the start of thirty-three years in the service.<Ref n={7} />
+      </p>
 
-      <Entry>
-        <p>
-          He rose to be a headmaster. In his own account, he was Head Master of Hari Singh High School.
-          <Ref n={8} />
-        </p>
-        <Note slot="notes" n={8} status="own-account">
-          Khalid Bashir Ahmad, from an interview in December 2011. A 1947 list may place him elsewhere. That reading is uncertain, and is not used here.
-        </Note>
-      </Entry>
+      <p>
+        He rose to be a headmaster. In his own account, he was Head Master of Hari Singh High School.<Ref n={8} />
+      </p>
 
-      <Entry>
-        <p>
-          One of his early postings was as a lecturer at the Intermediate College in Mirpur.
-          <Ref n={9} />
-        </p>
-        <Note slot="notes" n={9} status="own-account">
-          The Bhadarwah history. A lectureship at Prince of Wales College, Jammu, has not been found in the opened records.
-        </Note>
-      </Entry>
+      <p>
+        One of his early postings was as a lecturer at the Intermediate College in Mirpur.<Ref n={9} />
+      </p>
     </div>
 
     <Chapter id="jammu-1947" years="November 1947" place="Jammu" space="wide" />
 
     <div class="prose-stack">
-      <Entry>
+      <p>
+        In November 1947, during the killings in Jammu, Abdul Aziz Butt and his family were caught in the
+        violence. He was 31, a young father and a teacher.
+      </p>
+
+      <Memory>
         <p>
-          In November 1947, during the killings in Jammu, Abdul Aziz Butt and his family were caught in the
-          violence. He was 31, a young father and a teacher.
+          In November 1947 the family was put on a bus in Jammu that they were told would take them to safety.
+          It went another way, into an ambush. He was holding their daughter, Masooda, when he was shot. The
+          bullet killed her and took his left thumb. His wife, Saideh, was wounded in the head and survived.
         </p>
-        <Memory>
-          <p>
-            In November 1947 the family was put on a bus in Jammu that they were told would take them to safety.
-            It went another way, into an ambush. He was holding their daughter, Masooda, when he was shot. The
-            bullet killed her and took his left thumb. His wife, Saideh, was wounded in the head and survived.
-          </p>
-          <p>
-            He lived without his left thumb for the rest of his life, nearly seventy years.
-            <Ref n={10} />
-            <Ref n={11} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={10} status="family-memory">
-          The daughter’s name, the thumb, and Saideh’s wound, as the family remembers them. Her age is not stated.
-        </Note>
-        <Note slot="notes" n={11} status="record">
-          The Kashmir Life obituary of 8 August 2016 says a daughter was killed and that his hand was damaged. It does not give her name, or say that the thumb was lost.
-        </Note>
-      </Entry>
+        <p>
+          He lived without his left thumb for the rest of his life, nearly seventy years.<Ref n={10} /><span class="noteref-sep" aria-hidden="true">,</span><Ref n={11} />
+        </p>
+      </Memory>
     </div>
 
     <Chapter id="kashmir" years="1948–1962" place="Anantnag, Bhaderwah and Srinagar" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>
-          He went back to work in the schools, now in Kashmir, as an Inspector of Schools at Anantnag. After
-          1947 his work moved to Kashmir, and he made his home in Srinagar.
-          <Ref n={12} />
-        </p>
-        <Note slot="notes" n={12} status="own-account">
-          Khalid Bashir Ahmad, and the Bhadarwah history. The move to Srinagar is not a founding of the university.
-        </Note>
-      </Entry>
+      <p>
+        He went back to work in the schools, now in Kashmir, as an Inspector of Schools at Anantnag. After
+        1947 his work moved to Kashmir, and he made his home in Srinagar.<Ref n={12} />
+      </p>
 
-      <Entry>
-        <p>
-          In 1956 he completed a one-year training course in England, with Ghulam Rasool Azad and others.
-          <Ref n={13} />
-        </p>
-        <Note slot="notes" n={13} status="own-account">
-          The Bhadarwah history. The course lasted a year. It is a separate fact from Oxford, and does not explain it.
-        </Note>
-      </Entry>
+      <p>
+        In 1956 he completed a one-year training course in England, with Ghulam Rasool Azad and others.<Ref n={13} />
+      </p>
 
-      <Entry>
-        <Memory>
-          <p>
-            The family remembers him as a travelling scholar at Oxford.
-            <Ref n={14} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={14} status="family-memory">
-          No year, college or certificate has been found. The memory is not dated, and it is not a guest lectureship.
-        </Note>
-      </Entry>
+      <Memory>
+        <p>
+          The family remembers him as a travelling scholar at Oxford.<Ref n={14} />
+        </p>
+      </Memory>
 
-      <Entry>
-        <p>
-          He was Principal of the degree college at Bhaderwah, and later of S.P. College, Srinagar. He was
-          Secretary of the Jammu and Kashmir Board of School Education, and Deputy Director of Education in Kashmir.
-          <Ref n={15} />
-        </p>
-        <p>
-          In thirty-three years in the state’s education service, from 1941 to 1974, he was a teacher, a
-          headmaster, an Inspector of Schools, a college principal, Secretary of the Board of School Education
-          and Deputy Director of Education in Kashmir.
-        </p>
-        <Note slot="notes" n={15} status="own-account">
-          The Bhadarwah history and Khalid Bashir Ahmad. One local book calls him Chairman of the Board. Secretary is the title used here. The Bhaderwah college opened in the mid-1950s. He was its principal, not its student.
-        </Note>
-      </Entry>
+      <p>
+        He was Principal of the degree college at Bhaderwah, and later of S.P. College, Srinagar. He was
+        Secretary of the Jammu and Kashmir Board of School Education, and Deputy Director of Education in Kashmir.<Ref n={15} />
+      </p>
+      <p>
+        In thirty-three years in the state’s education service, from 1941 to 1974, he was a teacher, a
+        headmaster, an Inspector of Schools, a college principal, Secretary of the Board of School Education
+        and Deputy Director of Education in Kashmir.
+      </p>
     </div>
 
     <Chapter id="hazratbal" years="1962–1971" place="Hazratbal" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>
-          The university began in 1948 as an examining body. By 1962 it had teaching departments and a campus at Hazratbal.
-          <Ref n={16} />
-        </p>
-        <Note slot="notes" n={16} status="record">
-          Inaugurated on 2 November 1948, after the state was cut off from Punjab University at Lahore. The university’s later account dates teaching departments to 1956. He was not on a founding faculty.
-        </Note>
-      </Entry>
+      <p>
+        The university began in 1948 as an examining body. By 1962 it had teaching departments and a campus at Hazratbal.<Ref n={16} />
+      </p>
 
-      <Entry>
-        <p>
-          He was a professor at the university and served as its Registrar from September 1962 to 1971: Registrar
-          of the University of Jammu and Kashmir and, after the university was divided in 1969, of the University
-          of Kashmir.
-        </p>
-        <p>
-          The university’s printed list of its Registrars records him as “4. Prof. Abdul Aziz — Sept1962 – 1971.”
-          The same list places Prof. A. S. Dhar immediately before him and Prof. M. A. Chishti immediately after.
-          <Ref n={17} />
-        </p>
-        <Note slot="notes" n={17} status="record">
-          <cite>University Calendar 2010</cite>, Vol. I, p. xix, read from the page image. The line has no surname. The books and the obituary are what join it to Abdul Aziz Butt of Kilhotran. The family knows him as a professor there. No paper yet names his department.
-        </Note>
-      </Entry>
+      <p>
+        He was a professor at the university and served as its Registrar from September 1962 to 1971: Registrar
+        of the University of Jammu and Kashmir and, after the university was divided in 1969, of the University
+        of Kashmir.
+      </p>
+      <p>
+        The university’s printed list of its Registrars records him as “4. Prof. Abdul Aziz — Sept1962 – 1971.”
+        The same list places Prof. A. S. Dhar immediately before him and Prof. M. A. Chishti immediately after.<Ref n={17} />
+      </p>
 
-      <Entry>
-        <p>
-          Some accounts end the first part of that tenure in 1969, the year the university was divided. One
-          obituary says he left in 1966. The Calendar keeps him in the list until 1971, and that is the span given here.
-          <Ref n={18} />
-        </p>
-        <p>
-          As Registrar he kept the university’s records and served as secretary to its councils and faculties,
-          through its reorganisation in 1965 and its division in 1969.
-        </p>
-        <Note slot="notes" n={18} status="record">
-          The 1966 date is the Kashmir Life obituary. The 1969 date is where some books divide the old university from the new. The duties are those of the Registrar’s office, not a separate diary of his days.
-        </Note>
-      </Entry>
+      <p>
+        Some accounts end the first part of that tenure in 1969, the year the university was divided. One
+        obituary says he left in 1966. The Calendar keeps him in the list until 1971, and that is the span given here.<Ref n={18} />
+      </p>
+      <p>
+        As Registrar he kept the university’s records and served as secretary to its councils and faculties,
+        through its reorganisation in 1965 and its division in 1969.
+      </p>
     </div>
 
     <Chapter id="sopore" years="1974–1986" place="Sopore and Jammu" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>
-          After he retired in 1974, he was Principal of the Muslim Educational Trust’s College of Education at
-          Sopore until 1981. In 1986 he laid the foundation of the College of Education at the Model Institute
-          of Education, Jammu.
-          <Ref n={19} />
-        </p>
-        <Note slot="notes" n={19} status="own-account">
-          Khalid Bashir Ahmad and <cite>Bhalessa</cite> give 1974–1981 at Sopore. The Bhadarwah history says “the next five years”, and that in 1986 he became adviser to the college’s director. The longer Sopore span is the one used here.
-        </Note>
-      </Entry>
+      <p>
+        After he retired in 1974, he was Principal of the Muslim Educational Trust’s College of Education at
+        Sopore until 1981. In 1986 he laid the foundation of the College of Education at the Model Institute
+        of Education, Jammu.<Ref n={19} />
+      </p>
     </div>
 
     <Chapter id="later" years="1986–2016" place="Gogjibagh and Jammu" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>
-          He lived at Gogjibagh in Srinagar. In February 2006 he joined a gathering in Jammu to honour Ghulam Nabi
-          Azad. In December 2011 he gave an interview to the writer Khalid Bashir Ahmad.
-          <Ref n={20} />
-        </p>
-        <Note slot="notes" n={20} status="record">
-          Gogjibagh is in the Kashmir Life obituary. The 2006 gathering is in the Bhadarwah history, which dates it 8 February. The interview is Khalid Bashir Ahmad’s, taken in December 2011.
-        </Note>
-      </Entry>
+      <p>
+        He lived at Gogjibagh in Srinagar. In February 2006 he joined a gathering in Jammu to honour Ghulam Nabi
+        Azad. In December 2011 he gave an interview to the writer Khalid Bashir Ahmad.<Ref n={20} />
+      </p>
 
-      <Entry>
-        <p>
-          He died in Jammu on 7 August 2016, at the age of 100. He had lived through the last decades of the
-          princely state, through 1947, and through everything after.
-          <Ref n={21} />
-        </p>
-        <p>
-          He carried the loss of 1947, and his missing thumb, for nearly seventy years, and gave much of that
-          time to schools, colleges and teachers.
-        </p>
-        <p>Like the chinars of Kashmir, he stood for a hundred years.</p>
-        <Note slot="notes" n={21} status="record">
-          Khalid Bashir Ahmad: he died on 7 August 2016, twelve days after completing 100 years. The Kashmir Life headline says 98. The day was a Sunday, and the two accounts agree on that. The age used here is 100.
-        </Note>
-      </Entry>
+      <p>
+        He died in Jammu on 7 August 2016, at the age of 100. He had lived through the last decades of the
+        princely state, through 1947, and through everything after.<Ref n={21} />
+      </p>
+      <p>
+        He carried the loss of 1947, and his missing thumb, for nearly seventy years, and gave much of that
+        time to schools, colleges and teachers.
+      </p>
+      <p>Like the chinars of Kashmir, he stood for a hundred years.</p>
     </div>
 
     <Chapter id="family" years="Family" place="His children" />
 
     <div class="prose-stack">
-      <Entry>
-        <p>Abdul Aziz and Saideh had six children.</p>
+      <p>Abdul Aziz and Saideh had six children.</p>
+      <p>
+        An obituary says he was survived by three sons and three daughters. It names Javid Ahmad, a pilot, and
+        Altaf Ahmad, an engineer.<Ref n={22} />
+      </p>
+
+      <Memory>
         <p>
-          An obituary says he was survived by three sons and three daughters. It names Javid Ahmad, a pilot, and
-          Altaf Ahmad, an engineer.
-          <Ref n={22} />
+          Masooda, a daughter, was lost in November 1947. The family also names Yasmeen and Shaheen, daughters;
+          Altaf, a civil engineer; Javaid, a pilot; and Afzal, born in 1955, a general surgeon.<Ref n={23} />
         </p>
-        <Note slot="notes" n={22} status="record">
-          Kashmir Life, 8 August 2016, from Jalal Ud Din Shah. The family spells the pilot’s name Javaid.
-        </Note>
-      </Entry>
+      </Memory>
 
-      <Entry>
-        <Memory>
-          <p>
-            Masooda, a daughter, was lost in November 1947. The family also names Yasmeen and Shaheen, daughters;
-            Altaf, a civil engineer; Javaid, a pilot; and Afzal, born in 1955, a general surgeon.
-            <Ref n={23} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={23} status="family-memory">
-          The names beyond the obituary, and Afzal’s birth year, are the family’s. One book prints his wife’s name as Syeda. This site uses Saideh.
-        </Note>
-      </Entry>
-
-      <Entry>
-        <Memory>
-          <p>
-            Outside his posts, he worked with young people all his life. He believed education was not only about classrooms.
-          </p>
-          <p>
-            The family remembers this as his line.
-            <q>{site.saying}</q>
-            <Ref n={24} />
-          </p>
-        </Memory>
-        <Note slot="notes" n={24} status="family-memory">
-          The line is kept as the family says it, including the capital C in Cement. It has not been found in a published source.
-        </Note>
-      </Entry>
+      <Memory>
+        <p>
+          Outside his posts, he worked with young people all his life. He believed education was not only about classrooms.
+        </p>
+        <p>
+          The family remembers this as his line.
+          <q>{site.saying}</q><Ref n={24} />
+        </p>
+      </Memory>
     </div>
 
     <Inscription>{site.birth} – {site.death}</Inscription>
+
+    <details class="endnotes" id="notes">
+      <summary class="endnotes-summary">
+        <span class="endnotes-title">Notes and sources</span>
+        <span class="endnotes-count">24 notes</span>
+      </summary>
+      <ol class="endnotes-list">
+        <Note n={1} status="record">
+          Civil List No. 127, and the same date in the lists of 1947 and about 1953. Two later books give 26 July 1916 as well.
+        </Note>
+        <Note n={2} status="family-memory">
+          Recorded by the family on 11 November 2026. A father’s name printed in one local history is not used here.
+        </Note>
+        <Note n={3} status="own-account">
+          Bashir Bhadarwahi, <cite>The History and Culture of Bhadarwah</cite> (2023), pp. 671 and 774–775.
+        </Note>
+        <Note n={4} status="family-memory">
+          The family corrected an earlier count of fourteen educated people in the village. The count is not used.
+        </Note>
+        <Note n={5} status="own-account">
+          The Bhadarwah history. No opened record shows him as a student of the Bhaderwah degree college, which did not yet exist.
+        </Note>
+        <Note n={6} status="own-account">
+          The Bhadarwah history, drawing on what he told its author. No university register was opened.
+        </Note>
+        <Note n={7} status="record">
+          Civil List No. 127 dates his entry into service to about May or June 1941. The Bhadarwah history names the Kishtwar post.
+        </Note>
+        <Note n={8} status="own-account">
+          Khalid Bashir Ahmad, from an interview in December 2011. A 1947 list may place him elsewhere. That reading is uncertain, and is not used here.
+        </Note>
+        <Note n={9} status="own-account">
+          The Bhadarwah history. A lectureship at Prince of Wales College, Jammu, has not been found in the opened records.
+        </Note>
+        <Note n={10} status="family-memory">
+          The daughter’s name, the thumb, and Saideh’s wound, as the family remembers them. Her age is not stated.
+        </Note>
+        <Note n={11} status="record">
+          The Kashmir Life obituary of 8 August 2016 says a daughter was killed and that his hand was damaged. It does not give her name, or say that the thumb was lost.
+        </Note>
+        <Note n={12} status="own-account">
+          Khalid Bashir Ahmad, and the Bhadarwah history. The move to Srinagar is not a founding of the university.
+        </Note>
+        <Note n={13} status="own-account">
+          The Bhadarwah history. The course lasted a year. It is a separate fact from Oxford, and does not explain it.
+        </Note>
+        <Note n={14} status="family-memory">
+          No year, college or certificate has been found. The memory is not dated, and it is not a guest lectureship.
+        </Note>
+        <Note n={15} status="own-account">
+          The Bhadarwah history and Khalid Bashir Ahmad. One local book calls him Chairman of the Board. Secretary is the title used here. The Bhaderwah college opened in the mid-1950s. He was its principal, not its student.
+        </Note>
+        <Note n={16} status="record">
+          Inaugurated on 2 November 1948, after the state was cut off from Punjab University at Lahore. The university’s later account dates teaching departments to 1956. He was not on a founding faculty.
+        </Note>
+        <Note n={17} status="record">
+          <cite>University Calendar 2010</cite>, Vol. I, p. xix, read from the page image. The line has no surname. The books and the obituary are what join it to Abdul Aziz Butt of Kilhotran. The family knows him as a professor there. No paper yet names his department.
+        </Note>
+        <Note n={18} status="record">
+          The 1966 date is the Kashmir Life obituary. The 1969 date is where some books divide the old university from the new. The duties are those of the Registrar’s office, not a separate diary of his days.
+        </Note>
+        <Note n={19} status="own-account">
+          Khalid Bashir Ahmad and <cite>Bhalessa</cite> give 1974–1981 at Sopore. The Bhadarwah history says “the next five years”, and that in 1986 he became adviser to the college’s director. The longer Sopore span is the one used here.
+        </Note>
+        <Note n={20} status="record">
+          Gogjibagh is in the Kashmir Life obituary. The 2006 gathering is in the Bhadarwah history, which dates it 8 February. The interview is Khalid Bashir Ahmad’s, taken in December 2011.
+        </Note>
+        <Note n={21} status="record">
+          Khalid Bashir Ahmad: he died on 7 August 2016, twelve days after completing 100 years. The Kashmir Life headline says 98. The day was a Sunday, and the two accounts agree on that. The age used here is 100.
+        </Note>
+        <Note n={22} status="record">
+          Kashmir Life, 8 August 2016, from Jalal Ud Din Shah. The family spells the pilot’s name Javaid.
+        </Note>
+        <Note n={23} status="family-memory">
+          The names beyond the obituary, and Afzal’s birth year, are the family’s. One book prints his wife’s name as Syeda. This site uses Saideh.
+        </Note>
+        <Note n={24} status="family-memory">
+          The line is kept as the family says it, including the capital C in Cement. It has not been found in a published source.
+        </Note>
+      </ol>
+    </details>
+
     <p class="next-link"><a href="/timeline">Next: the register</a>.</p>
   </Prose>
+
+  <script is:inline>
+    (() => {
+      const notes = document.getElementById('notes');
+      if (!notes) return;
+
+      const openForHash = (hash) => {
+        if (hash && hash.startsWith('#note-')) {
+          notes.open = true;
+          const target = document.getElementById(hash.slice(1));
+          if (target) {
+            requestAnimationFrame(() => target.scrollIntoView({ block: 'nearest' }));
+          }
+        }
+      };
+
+      openForHash(window.location.hash);
+      window.addEventListener('hashchange', () => openForHash(window.location.hash));
+      document.addEventListener('click', (event) => {
+        const link = event.target instanceof Element ? event.target.closest('a.noteref') : null;
+        if (link) {
+          notes.open = true;
+        }
+      });
+      window.addEventListener('beforeprint', () => {
+        notes.open = true;
+      });
+    })();
+  </script>
 </BaseLayout>
