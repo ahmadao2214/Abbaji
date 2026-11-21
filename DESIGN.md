@@ -6,14 +6,14 @@ Full design rationale and verification notes live in [wiki/topics/redesign-plan.
 
 ## Core Principles
 
-1. **One uninterrupted reading column.** Prose sits in a left-aligned `65ch` measure so the life story reads cleanly on phone and desktop, with numbered references linking to collapsible endnotes at the bottom of `/biography`.
+1. **One uninterrupted reading column.** Prose sits in a left-aligned `65ch` measure so the life story reads cleanly on phone and desktop, with a collapsible `Notes and sources` drawer at the bottom of `/biography`.
 2. **Evidence is structural.** Every claim is marked with a written status label—never by color alone—distinguishing public record, his own account, family memory, and gaps in the record.
 3. **One repeated ornament.** Chapters and entries are structured by hairline rules with dates at the start. No decorative cards, gradients, or stock heritage motifs.
 4. **Print-first permanence.** Print styles render black on white, expand endnotes automatically, and wrap full source URLs cleanly on `/sources`.
 
 ## Color Tokens
 
-Six semantic OKLCH tokens defined in `src/styles/global.css` and exposed in `tailwind.config.cjs`:
+Six semantic OKLCH tokens defined in `src/styles/global.css`:
 
 | Token | OKLCH | Role |
 |---|---|---|
@@ -31,7 +31,7 @@ Hairlines use `--rule: oklch(var(--ink) / 0.14)` and `--rule-strong: oklch(var(-
 Both typefaces are self-hosted in `public/fonts/` and preloaded from `src/layouts/BaseLayout.astro`:
 
 - **English (`--font-serif`):** *Source Serif 4* (variable roman and italic, optical sizing enabled, oldstyle proportional numerals in prose, lining tabular numerals in dates/registers, small caps for labels).
-- **Urdu (`--font-urdu`):** *Noto Nastaliq Urdu* (regular weight only, never italicized, generous `2.0` line height for the name display).
+- **Urdu (`--font-urdu`):** *Noto Nastaliq Urdu* (subsetted to used Urdu name glyphs, regular weight only, never italicized, generous `2.0` line height for the name display).
 
 ## Evidence Status System
 
@@ -48,4 +48,4 @@ Defined in `src/data/status.ts` and rendered by `Note.astro`, `Memory.astro`, an
 - `Chapter.astro` — Place-and-years section divider (`1941–1947 · Kishtwar and Mirpur`, etc.).
 - `CivilListLine.astro` — Typographic quotation of printed Civil List / University Calendar entries.
 - `Memory.astro` & `Inscription.astro` — Distinct framing for family memory and date inscriptions.
-- `Note.astro` & `Ref.astro` — Numbered superscript references linked to collapsible endnotes at the foot of `/biography`.
+- `Note.astro` — Numbered note items inside the collapsible `Notes and sources` drawer at the foot of `/biography`.

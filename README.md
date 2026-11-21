@@ -9,7 +9,7 @@ Every claim distinguishes between **public record**, **his own account**, **fami
 ## Tech Stack
 
 - **[Astro](https://astro.build)** — Static site generator (zero JS by default)
-- **[Tailwind CSS](https://tailwindcss.com)** — Utility-first styling backed by semantic OKLCH CSS tokens
+- **CSS Custom Properties (OKLCH)** — Semantic design tokens in `src/styles/global.css`
 - **TypeScript** — Typed data modules in `src/data/`
 - **Vercel / Netlify** — Static deployment (`dist/`)
 
@@ -18,19 +18,21 @@ Every claim distinguishes between **public record**, **his own account**, **fami
 ```text
 /
 ├── public/
-│   ├── fonts/                 # Self-hosted Source Serif 4 & Noto Nastaliq Urdu
-│   └── favicon.svg            # Single-color monogram favicon
+│   ├── fonts/                 # Self-hosted Source Serif 4 & subset Noto Nastaliq Urdu
+│   ├── apple-touch-icon.png   # 180×180 iOS home screen icon
+│   ├── favicon.svg            # Single-color monogram favicon
+│   ├── og-image.png           # 1200×630 social preview card
+│   └── robots.txt
 ├── src/
 │   ├── components/
 │   │   ├── Chapter.astro      # Place-and-years chapter section
 │   │   ├── CivilListLine.astro# Quoted Civil List / Calendar register lines
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
-│   │   ├── Inscription.astro  # Family saying block
+│   │   ├── Inscription.astro  # Date inscription
 │   │   ├── Memory.astro       # Explicitly labelled family-memory block
 │   │   ├── Note.astro         # Collapsible endnote item
-│   │   ├── Prose.astro        # Reading column layout
-│   │   └── Ref.astro          # Inline superscript reference to endnotes
+│   │   └── Prose.astro        # Reading column layout
 │   ├── data/
 │   │   ├── chapters.ts        # Chapter metadata & table of contents
 │   │   ├── register.ts        # Chronological register entries
@@ -38,13 +40,14 @@ Every claim distinguishes between **public record**, **his own account**, **fami
 │   │   ├── sources.ts         # Cited records & unsupported claims
 │   │   └── status.ts          # Evidence status definitions
 │   ├── layouts/
-│   │   └── BaseLayout.astro   # Semantic layout, font preloads, JSON-LD
+│   │   └── BaseLayout.astro   # Semantic layout, font preloads, OG & JSON-LD
 │   ├── pages/
 │   │   ├── index.astro        # Title page
-│   │   ├── biography.astro    # Life story by chapter
+│   │   ├── biography.astro    # Life story by chapter + collapsible endnotes
 │   │   ├── timeline.astro     # Dated register
 │   │   ├── sources.astro      # Sources & what the record does not show
-│   │   └── gallery.astro      # Unlinked photographs placeholder page
+│   │   ├── gallery.astro      # Unlinked photographs placeholder page
+│   │   └── 404.astro          # Custom not-found page
 │   └── styles/
 │       └── global.css         # Typography, OKLCH tokens, register & print styles
 ├── wiki/                      # Project research wiki, redesign plan & open checks
@@ -52,7 +55,6 @@ Every claim distinguishes between **public record**, **his own account**, **fami
 ├── raw/                       # Immutable archived research imports & manifests
 ├── astro.config.mjs
 ├── netlify.toml
-├── tailwind.config.cjs
 └── tsconfig.json
 ```
 

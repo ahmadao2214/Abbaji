@@ -24,10 +24,6 @@
   font-display: swap;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --paper: 0.968 0.008 85;
   --paper-deep: 0.935 0.012 80;
@@ -410,19 +406,6 @@ sup {
   font-weight: 400;
 }
 
-.noteref {
-  color: oklch(var(--lake));
-  text-decoration: none;
-  font-variant-numeric: lining-nums tabular-nums;
-  padding-inline: 0.18em;
-}
-
-.noteref-sep {
-  font-size: 0.7em;
-  vertical-align: super;
-  color: oklch(var(--ink-muted));
-}
-
 .memory {
   border-inline-start: 2px solid oklch(var(--chinar));
   padding-inline-start: 0.95rem;
@@ -534,17 +517,6 @@ sup {
 
 .endnote[data-status="family-memory"] .label {
   color: oklch(var(--chinar));
-}
-
-.endnote-back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 28px;
-  min-height: 28px;
-  margin-inline-start: 0.2rem;
-  text-decoration: none;
-  vertical-align: baseline;
 }
 
 .epigraph {
@@ -750,8 +722,7 @@ sup {
 
   .skip,
   .site-header,
-  .site-footer nav,
-  .endnote-back {
+  .site-footer nav {
     display: none;
   }
 
