@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-11-11-jev-followup-180710",
+  "created_at": "2026-11-11T18:07:10+00:00",
+  "operation": "ingest follow-up: Oxford research, family statements of 11 Nov 2026 (second round), site grammar pass",
+  "requested_model": "jev-latest",
+  "question_set_version": "abbaji-wiki-qset-1",
+  "decisions": [
+    {
+      "question_id": "S1_england_course",
+      "kind": "support",
+      "passage_ids": [
+        "KBA115",
+        "BHD775"
+      ],
+      "state_sha256": "a057da11d0720bafd3ca889c4b7cc17cfbb138af0f3a34e258765a2e302f457b",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KBA115": "Khalid Bashir Ahmad, Kashmir: A Walk Through History, p. 115 (from an interview with him): \"He also did a year-long training course in England during mid-fifties.\"",
+            "BHD775": "Bashir Bhadarwahi, The History and Culture of Bhadarwah (2023), p. 775, on Professor Abdul Aziz Bhat: \"He served as the District Inspector of Schools in Anantnag. Later, he also completed a one-year Training Course in England along with Ghulam Rasool Azad Sahib and others in 1956 AD. He was appointed as the Principal of Bhadarwah Degree College the same year.\""
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"He completed a one-year training course in England in about 1956.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "supports",
+        "confidence": 0.99,
+        "probabilities": {
+          "supports": 0.99,
+          "contradicts": 0.0,
+          "not_addressed": 0.0,
+          "insufficient_context": 0.01
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 741,
+        "output_tokens": 57
+      },
+      "latency_ms": 159,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "topic-site-content-updates"
+      ],
+      "agent_explanation": "Course recorded as one-year, mid-1950s/1956, from KBA p.115 and BHD p.775 page images."
+    },
+    {
+      "question_id": "S2_oxford",
+      "kind": "support",
+      "passage_ids": [
+        "KBA115",
+        "BHD775"
+      ],
+      "state_sha256": "a057da11d0720bafd3ca889c4b7cc17cfbb138af0f3a34e258765a2e302f457b",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KBA115": "Khalid Bashir Ahmad, Kashmir: A Walk Through History, p. 115 (from an interview with him): \"He also did a year-long training course in England during mid-fifties.\"",
+            "BHD775": "Bashir Bhadarwahi, The History and Culture of Bhadarwah (2023), p. 775, on Professor Abdul Aziz Bhat: \"He served as the District Inspector of Schools in Anantnag. Later, he also completed a one-year Training Course in England along with Ghulam Rasool Azad Sahib and others in 1956 AD. He was appointed as the Principal of Bhadarwah Degree College the same year.\""
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"He was a travelling scholar at Oxford.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "not_addressed",
+        "confidence": 0.63,
+        "probabilities": {
+          "supports": 0.0,
+          "contradicts": 0.06,
+          "not_addressed": 0.72,
+          "insufficient_context": 0.22
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 732,
+        "output_tokens": 59
+      },
+      "latency_ms": 137,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Confirms the policy: the 1956 course does not address Oxford, so it is not offered as Oxford's explanation. Oxford stays family knowledge per the 11 Nov statement; Jev was not asked to test the family statement."
+    },
+    {
+      "question_id": "S3_registrar_1970",
+      "kind": "support",
+      "passage_ids": [
+        "CAL2010",
+        "CABE1971"
+      ],
+      "state_sha256": "10e0e7ca7c33ae53dfee8c1eac325bd52a8a6fa0009f94f9086e325453760ddf",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "CAL2010": "University of Kashmir, Calendar 2010, list of Registrars: \"4. Prof. Abdul Aziz — Sept1962 – 1971\" (no surname given).",
+            "CABE1971": "CABE/NCERT, Report of the Committee on Examinations (1971), list of important persons connected with education in Srinagar met in August 1970: \"2. Shri Ghulam Rasool Azad, Director of Education ... 4. Shri Abdul Aziz, Registrar, Kashmir University ... 5. Shri Ghulam Mohammad, Controller of Examinations\"."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"He was Registrar of the University of Kashmir in August 1970.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "supports",
+        "confidence": 0.68,
+        "probabilities": {
+          "supports": 0.76,
+          "contradicts": 0.0,
+          "not_addressed": 0.0,
+          "insufficient_context": 0.24
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 723,
+        "output_tokens": 61
+      },
+      "latency_ms": 155,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat"
+      ],
+      "agent_explanation": "Added as a contemporary record of the registrarship in Aug 1970. No surname, so it does not close open-confirmations item 1."
+    },
+    {
+      "question_id": "S4_sopore_1976",
+      "kind": "support",
+      "passage_ids": [
+        "CAL2010",
+        "KU1976"
+      ],
+      "state_sha256": "991b4e439ac246e38a64f1b631d1e33be83eba05030b1eeec02906ee7d77b5e0",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "CAL2010": "University of Kashmir, Calendar 2010, list of Registrars: \"4. Prof. Abdul Aziz — Sept1962 – 1971\" (no surname given).",
+            "KU1976": "University of Kashmir, Sixth Annual Report 1975-76, under constituent and affiliated colleges: \"i) Prof. S. M. Latif Beg, Principal, Govt. College, Sopore; ii) Prof. Abdul Aziz, Principal, M. E. T. Teachers' College, Sopore\". The same report elsewhere lists a \"Shri Abdul Aziz\" among Urdu and History teaching staff and a \"Dr. Abdul Aziz Khan\". No surname is given for the Sopore principal."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"After leaving the registrarship in 1971, he was Principal of M.E.T. Teachers' College, Sopore, in 1975-76.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "insufficient_context",
+        "confidence": 0.91,
+        "probabilities": {
+          "supports": 0.05,
+          "contradicts": 0.01,
+          "not_addressed": 0.01,
+          "insufficient_context": 0.93
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 761,
+        "output_tokens": 66
+      },
+      "latency_ms": 162,
+      "disposition": "needs_review",
+      "affected_pages": [
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Superseded by S4b, which adds the books' Sopore passages."
+    },
+    {
+      "question_id": "S5_kns_identity",
+      "kind": "support",
+      "passage_ids": [
+        "KNS2017",
+        "KL2016",
+        "BHL32"
+      ],
+      "state_sha256": "1ff95575211478a6ec530b1ec25aa31bfec07bcb2e30980097c1d83801922027",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KNS2017": "KNS wire notice, Srinagar, 7 April 2017: \"Ever-smiling, soft spoken, meticulously dressed and a gentleman to the core, prominent educationist Master Abdul Aziz Bhat is no more.\" \"He spent his life in promotion of education and was a prominent face, and much respected one, among academics.\" It gives no age, locality, date of death or posts held.",
+            "KL2016": "Kashmir Life obituary, 8 August 2016, \"KU Ex-Registrar Dies At 98\": he \"breathed his last in Jammu on Sunday\"; he \"lived in Gogjibagh area in Srinagar\".",
+            "BHL32": "Malik, Bhalessa (2021), p. 32, directly under his biography: \"Ever-smiling, soft spoken, meticulously dressed and a gentleman to the core, prominent educationist Professor Abdul Aziz Bhat is no more. We have an academic par excellence.\" This book is known to copy from the KNS notice and from Kashmir Life."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"The KNS notice of 7 April 2017 is about him, the former Registrar who died in Jammu on 7 August 2016.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "insufficient_context",
+        "confidence": 0.35,
+        "probabilities": {
+          "supports": 0.37,
+          "contradicts": 0.09,
+          "not_addressed": 0.03,
+          "insufficient_context": 0.51
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 841,
+        "output_tokens": 61
+      },
+      "latency_ms": 158,
+      "disposition": "needs_review",
+      "affected_pages": [
+        "question-open-confirmations",
+        "topic-site-content-updates"
+      ],
+      "agent_explanation": "Split (insufficient 0.51, supports 0.37). The existing recommendation stands: remove the quote unless the family knows the notice was about him. Left as a family question."
+    },
+    {
+      "question_id": "S6_hp_persian",
+      "kind": "support",
+      "passage_ids": [
+        "BHLDEG",
+        "PUCAL",
+        "GOI1973",
+        "BHDMF"
+      ],
+      "state_sha256": "fab6054fbb2b1eb692e575e445d0f6ae0dfb8084ce5d719a181c8b29d03be882",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "BHLDEG": "Sadaket Ali Malik, Bhalessa (2021), on Professor Abdul Aziz Batt, prints after his name the degrees \"M.A, B.T, L.L.B, H.P., E.E.T&P (London)\".",
+            "PUCAL": "Punjab University Calendar 1929-30: \"Munshi Fazil—Honours in Persian\".",
+            "GOI1973": "Gazette of India 1973, No. 511: \"Honours in Persian Language and Literature, to be called 'MUNSHI FAZIL'\".",
+            "BHDMF": "Bhadarwahi, The History and Culture of Bhadarwah: he \"cleared Munshi Fazil exam in First Class\"."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"The letters H.P. among his degrees stand for Honours in Persian (Munshi Fazil).\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "insufficient_context",
+        "confidence": 0.63,
+        "probabilities": {
+          "supports": 0.17,
+          "contradicts": 0.01,
+          "not_addressed": 0.1,
+          "insufficient_context": 0.72
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 756,
+        "output_tokens": 62
+      },
+      "latency_ms": 148,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Recorded as an inference (likely Honours in Persian / Munshi Fazil), not as a finding."
+    },
+    {
+      "question_id": "R1_first_educated",
+      "kind": "relation",
+      "passage_ids": [
+        "FAMFIRST",
+        "BHDFIRST"
+      ],
+      "state_sha256": "bc8f8b35988e71c79c02a8911c10b7ab4bcccc43a5b787251df9c9eef8a44b46",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "FAMFIRST": "Family statement (his grandson, 11 November 2026): he was the first educated person from his village.",
+            "BHDFIRST": "Bhadarwahi, The History and Culture of Bhadarwah: \"The first group from Bhalesa that took admission in Bhadarwah School includes the following persons: 1; Malik Umar-ul-Din 2: Professor Abdul Aziz Bhat 3: Ghulam Rasool Azad 4: Sultan Muhammad Khan...\"; and, pp. 670-671: \"Jenab Abdul Aziz Butt former Registrar Jammu and Kashmir University, who is also the first M.A. of this place.\""
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Compare two observations about `subject`. Observation A: \"The family says he was the first educated person from his village.\" Observation B: \"A local history lists him in the first group of boys from Bhalesa admitted to the Bhadarwah school, alongside Malik Umar-ul-Din, Ghulam Rasool Azad and others, and calls him the first M.A. of the place.\" Using `passages`, how do A and B relate?",
+          "criteria": {
+            "consistent": "Both observations can be true together of the same person without strain.",
+            "conflicting_same_scope": "The observations make incompatible statements about the same fact, so at most one can be exactly right.",
+            "different_scope_or_time": "The observations look different but describe different things, scopes or times, so both can stand when labelled.",
+            "insufficient_context": "The passages do not give enough to say how the observations relate."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "different_scope_or_time",
+        "confidence": 0.4,
+        "probabilities": {
+          "consistent": 0.29,
+          "conflicting_same_scope": 0.16,
+          "different_scope_or_time": 0.55,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 746,
+        "output_tokens": 64
+      },
+      "latency_ms": 136,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "topic-site-content-updates"
+      ],
+      "agent_explanation": "Family statement kept; the local history's first group and first M.A. recorded beside it as different-scope observations."
+    },
+    {
+      "question_id": "R2_first_vs_14",
+      "kind": "relation",
+      "passage_ids": [
+        "FAMFIRST",
+        "SITE14",
+        "BHDFIRST"
+      ],
+      "state_sha256": "9c732cd92520216029f9086c0d065ef95d67821c6bb582202ed800096bd3579e",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "FAMFIRST": "Family statement (his grandson, 11 November 2026): he was the first educated person from his village.",
+            "SITE14": "Current memorial-site copy (not a source): \"In Bhalessa, only 14 people out of the entire village became educated during his generation. Among them were Abdul Aziz Butt and Ghulam Rasool Azad.\"",
+            "BHDFIRST": "Bhadarwahi, The History and Culture of Bhadarwah: \"The first group from Bhalesa that took admission in Bhadarwah School includes the following persons: 1; Malik Umar-ul-Din 2: Professor Abdul Aziz Bhat 3: Ghulam Rasool Azad 4: Sultan Muhammad Khan...\"; and, pp. 670-671: \"Jenab Abdul Aziz Butt former Registrar Jammu and Kashmir University, who is also the first M.A. of this place.\""
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Compare two observations about `subject`. Observation A: \"The family says he was the first educated person from his village.\" Observation B: \"The current site copy says only 14 people from the village were educated in his generation, among them him and Ghulam Rasool Azad.\" Using `passages`, how do A and B relate?",
+          "criteria": {
+            "consistent": "Both observations can be true together of the same person without strain.",
+            "conflicting_same_scope": "The observations make incompatible statements about the same fact, so at most one can be exactly right.",
+            "different_scope_or_time": "The observations look different but describe different things, scopes or times, so both can stand when labelled.",
+            "insufficient_context": "The passages do not give enough to say how the observations relate."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "different_scope_or_time",
+        "confidence": 0.36,
+        "probabilities": {
+          "consistent": 0.11,
+          "conflicting_same_scope": 0.37,
+          "different_scope_or_time": 0.52,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 779,
+        "output_tokens": 65
+      },
+      "latency_ms": 132,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "topic-site-content-updates"
+      ],
+      "agent_explanation": "The family corrected the site copy on 11 Nov 2026: the count of fourteen is replaced by 'first educated person from his village'. Jev's split (different scope 0.52, conflict 0.37) is noted; the user's correction governs."
+    },
+    {
+      "question_id": "R3_father",
+      "kind": "relation",
+      "passage_ids": [
+        "FAMFATHER",
+        "BHD774"
+      ],
+      "state_sha256": "48656c8800cb0b6f72aecb00d152c08a4d50b1dfc588ffa5b6c22592be4c2645",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "FAMFATHER": "Family statement (his grandson, 11 November 2026): his father's name was Muhammad Sultan.",
+            "BHD774": "Bhadarwahi, The History and Culture of Bhadarwah, p. 774 (OCR text layer of the English scan, not checked against the page image): \"Professor Abdul Aziz Bhat was born in the renowned Bhat family of village Kilhotran Tehsil Bhalesa, to Khwaja Sulla Bhat on 26 July 1916 AD.\""
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Compare two observations about `subject`. Observation A: \"The family says his father's name was Muhammad Sultan.\" Observation B: \"The OCR text of a local history names his father as Khwaja Sulla Bhat.\" Using `passages`, how do A and B relate?",
+          "criteria": {
+            "consistent": "Both observations can be true together of the same person without strain.",
+            "conflicting_same_scope": "The observations make incompatible statements about the same fact, so at most one can be exactly right.",
+            "different_scope_or_time": "The observations look different but describe different things, scopes or times, so both can stand when labelled.",
+            "insufficient_context": "The passages do not give enough to say how the observations relate."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "conflicting_same_scope",
+        "confidence": 0.96,
+        "probabilities": {
+          "consistent": 0.02,
+          "conflicting_same_scope": 0.97,
+          "different_scope_or_time": 0.01,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 683,
+        "output_tokens": 63
+      },
+      "latency_ms": 139,
+      "disposition": "applied",
+      "affected_pages": [
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Conflict confirmed; the item stays open, and 'Sulla' stays off the site."
+    },
+    {
+      "question_id": "R4_birth",
+      "kind": "relation",
+      "passage_ids": [
+        "CL127",
+        "BHD774",
+        "FAMBIRTH"
+      ],
+      "state_sha256": "c5ec295b7f89d7ab157302e54af46ff704ab9b64b02aac96f16058cefe4490d0",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "CL127": "J&K Civil List No. 127 (about 1952), Kashmir Education Service, Class III: \"19. Abdul Aziz Butt | 26-7-1916 | ...\" (column: date of birth).",
+            "BHD774": "Bhadarwahi, The History and Culture of Bhadarwah, p. 774 (OCR text layer of the English scan, not checked against the page image): \"Professor Abdul Aziz Bhat was born in the renowned Bhat family of village Kilhotran Tehsil Bhalesa, to Khwaja Sulla Bhat on 26 July 1916 AD.\"",
+            "FAMBIRTH": "Family memory: he was born in January 1916."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Compare two observations about `subject`. Observation A: \"Government records and two books give his date of birth as 26 July 1916.\" Observation B: \"Family memory gives January 1916.\" Using `passages`, how do A and B relate?",
+          "criteria": {
+            "consistent": "Both observations can be true together of the same person without strain.",
+            "conflicting_same_scope": "The observations make incompatible statements about the same fact, so at most one can be exactly right.",
+            "different_scope_or_time": "The observations look different but describe different things, scopes or times, so both can stand when labelled.",
+            "insufficient_context": "The passages do not give enough to say how the observations relate."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "conflicting_same_scope",
+        "confidence": 0.97,
+        "probabilities": {
+          "consistent": 0.01,
+          "conflicting_same_scope": 0.98,
+          "different_scope_or_time": 0.01,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 735,
+        "output_tokens": 62
+      },
+      "latency_ms": 157,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "topic-site-content-updates",
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Conflict confirmed. The family said on 11 Nov 2026 that 26 July 1916 is probably correct; the site leads with it, and January is kept on the entity page as an earlier family memory."
+    },
+    {
+      "question_id": "P1_place_course",
+      "kind": "place",
+      "passage_ids": [
+        "KBA115",
+        "BHD775"
+      ],
+      "state_sha256": "f5dbfa68c65c6fa68c204a014770436eda7a0655f0628c40812a87cb19dfbb7b",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KBA115": "Khalid Bashir Ahmad, Kashmir: A Walk Through History, p. 115 (from an interview with him): \"He also did a year-long training course in England during mid-fifties.\"",
+            "BHD775": "Bashir Bhadarwahi, The History and Culture of Bhadarwah (2023), p. 775, on Professor Abdul Aziz Bhat: \"He served as the District Inspector of Schools in Anantnag. Later, he also completed a one-year Training Course in England along with Ghulam Rasool Azad Sahib and others in 1956 AD. He was appointed as the Principal of Bhadarwah Degree College the same year.\""
+          },
+          "pages": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "A wiki about `subject` has the pages described in `pages`. Which single page is the primary home for this new finding: \"Two books record a one-year training course in England in 1956 with Ghulam Rasool Azad; neither mentions Oxford.\"?",
+          "criteria": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "entity-abdul-aziz-bhat",
+        "confidence": 0.74,
+        "probabilities": {
+          "entity-abdul-aziz-bhat": 0.78,
+          "topic-site-content-updates": 0.07,
+          "question-open-confirmations": 0.04,
+          "topic-redesign-plan": 0.0,
+          "new_page": 0.11,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 954,
+        "output_tokens": 93
+      },
+      "latency_ms": 164,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat"
+      ],
+      "agent_explanation": "Placed as Jev chose."
+    },
+    {
+      "question_id": "P2_place_1970",
+      "kind": "place",
+      "passage_ids": [
+        "CABE1971"
+      ],
+      "state_sha256": "07db168b4e2f8341f938b366f2e8578bcdafc35405bf6a334ffde9c258a96fa0",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "CABE1971": "CABE/NCERT, Report of the Committee on Examinations (1971), list of important persons connected with education in Srinagar met in August 1970: \"2. Shri Ghulam Rasool Azad, Director of Education ... 4. Shri Abdul Aziz, Registrar, Kashmir University ... 5. Shri Ghulam Mohammad, Controller of Examinations\"."
+          },
+          "pages": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "A wiki about `subject` has the pages described in `pages`. Which single page is the primary home for this new finding: \"A 1971 national report lists \"Shri Abdul Aziz, Registrar, Kashmir University\" among people met in Srinagar in August 1970.\"?",
+          "criteria": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "entity-abdul-aziz-bhat",
+        "confidence": 0.9,
+        "probabilities": {
+          "entity-abdul-aziz-bhat": 0.92,
+          "topic-site-content-updates": 0.02,
+          "question-open-confirmations": 0.01,
+          "topic-redesign-plan": 0.0,
+          "new_page": 0.05,
+          "insufficient_context": 0.0
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 890,
+        "output_tokens": 97
+      },
+      "latency_ms": 178,
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat"
+      ],
+      "agent_explanation": "Placed as Jev chose."
+    },
+    {
+      "question_id": "P3_place_sopore",
+      "kind": "place",
+      "passage_ids": [
+        "KU1976"
+      ],
+      "state_sha256": "54ba7d7e48a7baaa3ab2a7eef2fa5d81199599d4895dcea7fc432b95859d249d",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KU1976": "University of Kashmir, Sixth Annual Report 1975-76, under constituent and affiliated colleges: \"i) Prof. S. M. Latif Beg, Principal, Govt. College, Sopore; ii) Prof. Abdul Aziz, Principal, M. E. T. Teachers' College, Sopore\". The same report elsewhere lists a \"Shri Abdul Aziz\" among Urdu and History teaching staff and a \"Dr. Abdul Aziz Khan\". No surname is given for the Sopore principal."
+          },
+          "pages": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "A wiki about `subject` has the pages described in `pages`. Which single page is the primary home for this new finding: \"A 1975-76 university report lists a \"Prof. Abdul Aziz, Principal, M. E. T. Teachers' College, Sopore\" with no surname; it may or may not be him.\"?",
+          "criteria": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "question-open-confirmations",
+        "confidence": 0.66,
+        "probabilities": {
+          "entity-abdul-aziz-bhat": 0.22,
+          "topic-site-content-updates": 0.01,
+          "question-open-confirmations": 0.72,
+          "topic-redesign-plan": 0.0,
+          "new_page": 0.03,
+          "insufficient_context": 0.02
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 917,
+        "output_tokens": 92
+      },
+      "latency_ms": 152,
+      "disposition": "applied",
+      "affected_pages": [
+        "question-open-confirmations",
+        "entity-abdul-aziz-bhat"
+      ],
+      "agent_explanation": "Placed as Jev chose, with a secondary mention on the entity page (Jev's second choice, 0.22)."
+    },
+    {
+      "question_id": "P4_place_grammar",
+      "kind": "place",
+      "passage_ids": [],
+      "state_sha256": "26b3c8baa11f5884a7b0ee71155a20967c3de9ec9ca766abfa7157170ecf7770",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {},
+          "pages": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "A wiki about `subject` has the pages described in `pages`. Which single page is the primary home for this new finding: \"The memorial website's current copy has awkward grammar and inflated, machine-sounding phrasing that should be rewritten in a plain, quiet voice.\"?",
+          "criteria": {
+            "entity-abdul-aziz-bhat": "The person page: his life from birth to death, each point marked as public record, family knowledge or inference, with sources.",
+            "topic-site-content-updates": "Page-by-page corrections to the memorial website's wording, with replacement sentences.",
+            "question-open-confirmations": "Only items that still need a document or a family check, with what would settle each.",
+            "topic-redesign-plan": "A plan for the visual and structural redesign of the website.",
+            "new_page": "None of the existing pages is the right home; a new page is needed.",
+            "insufficient_context": "The finding is too unclear to place."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "topic-site-content-updates",
+        "confidence": 0.92,
+        "probabilities": {
+          "entity-abdul-aziz-bhat": 0.01,
+          "topic-site-content-updates": 0.93,
+          "question-open-confirmations": 0.0,
+          "topic-redesign-plan": 0.03,
+          "new_page": 0.02,
+          "insufficient_context": 0.01
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 787,
+        "output_tokens": 92
+      },
+      "latency_ms": 130,
+      "disposition": "applied",
+      "affected_pages": [
+        "topic-site-content-updates"
+      ],
+      "agent_explanation": "Placed as Jev chose."
+    },
+    {
+      "question_id": "S4b_sopore_with_books",
+      "kind": "support",
+      "passage_ids": [
+        "KU1976",
+        "KBASOPORE",
+        "BHLSOPORE",
+        "CAL2010"
+      ],
+      "state_sha256": "6c8017b704383634f31d3c9403832152cab22430fc118985fbed87f45b088711",
+      "request": {
+        "state": {
+          "subject": "Abdul Aziz Butt (also spelled Bhat or Batt), born 1916 at Kilhotran, Bhalessa, Doda district, Jammu and Kashmir; a teacher, headmaster and principal in the J&K education service; professor and Registrar of the University of Kashmir from September 1962 to 1971; died in Jammu on 7 August 2016.",
+          "passages": {
+            "KU1976": "University of Kashmir, Sixth Annual Report 1975-76, under constituent and affiliated colleges: \"i) Prof. S. M. Latif Beg, Principal, Govt. College, Sopore; ii) Prof. Abdul Aziz, Principal, M. E. T. Teachers' College, Sopore\". The same report elsewhere lists a \"Shri Abdul Aziz\" among Urdu and History teaching staff and a \"Dr. Abdul Aziz Khan\". No surname is given for the Sopore principal.",
+            "KBASOPORE": "Khalid Bashir Ahmad, Kashmir: A Walk Through History (from his 2011 interview with Abdul Aziz Bhat): after retirement in 1974, he was Principal of the Muslim Educational Trust, Sopore, until 1981.",
+            "BHLSOPORE": "Malik, Bhalessa (2021), p. 32: Principal of the MET College of Education, Sopore, \"till 1981\".",
+            "CAL2010": "University of Kashmir, Calendar 2010, list of Registrars: \"4. Prof. Abdul Aziz — Sept1962 – 1971\" (no surname given)."
+          }
+        },
+        "question": {
+          "type": "choice",
+          "instructions": "Read `passages` about `subject`. Do the passages, as written, support this claim about him: \"The \"Prof. Abdul Aziz, Principal, M. E. T. Teachers' College, Sopore\" in the 1975-76 university report is the same man as the subject, who by two books was Principal of the Muslim Educational Trust's teachers' college at Sopore from 1974 to 1981.\"?",
+          "criteria": {
+            "supports": "The passages, read as written, state or directly entail the claim, including its qualifications (dates, places, the person's identity).",
+            "contradicts": "The passages state something incompatible with the claim about the same person and time.",
+            "not_addressed": "The passages concern the person but say nothing about the specific thing the claim asserts. Silence is not contradiction.",
+            "insufficient_context": "The passages touch the claim, but they cannot establish it, for example because they do not identify the person (no surname, a common name, several namesakes) or are too fragmentary."
+          }
+        }
+      },
+      "resolved_model": "jev-1.14.0",
+      "answer": {
+        "type": "choice",
+        "choice": "insufficient_context",
+        "confidence": 0.87,
+        "probabilities": {
+          "supports": 0.08,
+          "contradicts": 0.02,
+          "not_addressed": 0.0,
+          "insufficient_context": 0.9
+        }
+      },
+      "valid": true,
+      "usage": {
+        "input_tokens": 912,
+        "output_tokens": 64
+      },
+      "latency_ms": 185,
+      "note": "Supplemental request: S4 omitted the two books' Sopore passages.",
+      "disposition": "applied",
+      "affected_pages": [
+        "entity-abdul-aziz-bhat",
+        "question-open-confirmations"
+      ],
+      "agent_explanation": "Recorded as consistent with KBA/BHL but not identifying him (no surname). Listed with the Calendar line as another surname-less university record."
+    }
+  ],
+  "execution_status": "completed",
+  "fallback": null,
+  "notes": "Passages are quotations as recorded in the research notes and the Oxford report; the parent agent re-checked the CABE 1971, KU 1975-76 and Hansard lines against the sources. API key read from a T3 secret file and not stored."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-11-followup",
+  "imported_at": "2026-11-11T18:09:57.746757+00:00",
+  "files": [
+    {
+      "origin": "research/2026-11-11-family/statements.md",
+      "snapshot": "raw/imports/2026-11-11-followup/research/2026-11-11-family/statements.md",
+      "sha256": "a9f86eaad667de8f11776aff457fa2ddd36124351641f4105ca1c3603b25a2f3",
+      "bytes": 1503,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-oxford/report.md",
+      "snapshot": "raw/imports/2026-11-11-followup/research/2026-11-11-oxford/report.md",
+      "sha256": "bcf56a1297cf346769f8864eac5c68abde761bddf4f807e619d8870b1fd408f4",
+      "bytes": 11787,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "research/wiki-decisions/2026-11-11-jev-followup.json",
+      "snapshot": "raw/imports/2026-11-11-followup/research/wiki-decisions/2026-11-11-jev-followup.json",
+      "sha256": "5934f2d692ce27293faab38cf8da21eea0f096f943ae7f04df6e34f22fbd773b",
+      "bytes": 47847,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "wiki/entities/abdul-aziz-bhat.md",
+      "snapshot": "raw/imports/2026-11-11-followup/wiki/entities/abdul-aziz-bhat.md",
+      "sha256": "baac7e09d54787f6bb7ef1f8cc16f862926fb8a2eada54d82ec5d0349a59db24",
+      "bytes": 26131,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "wiki/index.md",
+      "snapshot": "raw/imports/2026-11-11-followup/wiki/index.md",
+      "sha256": "ee51e7ae0d9a8fb9c37c51f90211efd336c023deb8f9728bcddbd235b0a8fd21",
+      "bytes": 1445,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "wiki/questions/open-confirmations.md",
+      "snapshot": "raw/imports/2026-11-11-followup/wiki/questions/open-confirmations.md",
+      "sha256": "d1f5abc6c4e22acaa7987ba2716fd522e8473c4d86c199c9a076c1607a95706c",
+      "bytes": 10832,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    },
+    {
+      "origin": "wiki/topics/site-content-updates.md",
+      "snapshot": "raw/imports/2026-11-11-followup/wiki/topics/site-content-updates.md",
+      "sha256": "0e869765ddca4fd8985b67bfa4d782b0a82f76ac63ee572a237680a4d36a647d",
+      "bytes": 41093,
+      "imported_at": "2026-11-11T18:09:57.746757+00:00"
+    }
+  ]
+}

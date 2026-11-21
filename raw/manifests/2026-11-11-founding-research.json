@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-11-founding-research",
+  "imported_at": "2026-11-11T16:07:23.731859+00:00",
+  "files": [
+    {
+      "origin": "research/2026-11-11-founding/notes/abdul-aziz-butt-first-pass-excerpt.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/abdul-aziz-butt-first-pass-excerpt.md",
+      "sha256": "d856d452916154e42fa277b9947c35c085c909de5c074ac00ca77ba81fbf8984",
+      "bytes": 3942,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/notes/abdul-aziz-butt.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/abdul-aziz-butt.md",
+      "sha256": "45bc6019dedef4a13cfb9be1bc7d3ae48d5158740eb30f128b363eab9854556f",
+      "bytes": 38502,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/notes/documentary-gap.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/documentary-gap.md",
+      "sha256": "0ccb02c0f18152aae2b820befa1f6bec20f81190c12a05505d5781fbcde3fe59",
+      "bytes": 38032,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/notes/education-and-registrar.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/education-and-registrar.md",
+      "sha256": "945969a489b9384f9e121ee855f535426e9e881700759ffab172a48b1773514a",
+      "bytes": 20410,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/notes/education-first-pass-excerpt.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/education-first-pass-excerpt.md",
+      "sha256": "3de57f8d2d545f6d0b03252199aa8925045ed63b47b038ac292897dac1a6d0f9",
+      "bytes": 2939,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/notes/founding.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/notes/founding.md",
+      "sha256": "6bab6cfa875e8b8603bcd5a54740ba8fe06a68df4b74a34cc79f75579f9035dc",
+      "bytes": 28002,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    },
+    {
+      "origin": "research/2026-11-11-founding/report.md",
+      "snapshot": "raw/imports/2026-11-11-founding-research/research/2026-11-11-founding/report.md",
+      "sha256": "d9967f15efaf801a68847bb0300c4941b3d2a0e8b0f8e2c62c18cf3b01fa4f7d",
+      "bytes": 41887,
+      "imported_at": "2026-11-11T16:07:23.731859+00:00"
+    }
+  ]
+}
