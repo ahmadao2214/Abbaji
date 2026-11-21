@@ -1,0 +1,12 @@
+---
+interface Props {
+  n: number;
+}
+
+const { n } = Astro.props;
+---
+
+<a class="noteref" id={`ref-${n}`} href={`#note-${n}`}>
+  <sup>{n}</sup>
+  <span class="vh">Note</span>
+</a>

@@ -1,0 +1,18 @@
+---
+import { statusLabel, type Status } from '../data/status';
+
+interface Props {
+  n: number;
+  status: Status;
+}
+
+const { n, status } = Astro.props;
+---
+
+<aside class="sidenote" id={`note-${n}`}>
+  <p>
+    <a class="sidenote-back" href={`#ref-${n}`}>{n}</a>
+    <span class="label">{statusLabel[status]}</span>
+    <slot />
+  </p>
+</aside>

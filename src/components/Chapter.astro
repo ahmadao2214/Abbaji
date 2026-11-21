@@ -1,0 +1,15 @@
+---
+interface Props {
+  id: string;
+  years: string;
+  place: string;
+  space?: 'wide';
+}
+
+const { id, years, place, space } = Astro.props;
+---
+
+<h2 id={id} class:list={['chapter', space === 'wide' && 'chapter-wide']}>
+  <span class="chapter-years">{years}</span>
+  <span class="chapter-place">{place}</span>
+</h2>

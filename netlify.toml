@@ -29,3 +29,20 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/legacy"
+  to = "/biography#family"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/legacy/"
+  to = "/biography#family"
+  status = 301
+  force = true

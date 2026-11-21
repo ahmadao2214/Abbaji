@@ -1,0 +1,12 @@
+<div class="entry">
+  <div class="entry-main">
+    <slot />
+  </div>
+  {
+    Astro.slots.has('notes') && (
+      <div class="entry-notes">
+        <slot name="notes" />
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Prose from '../components/Prose.astro';
+import { notFound, openRecords, sourceKinds, sources } from '../data/sources';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Sources · Abdul Aziz Butt"
+  description="The records, books, obituary and family memory behind this account of Abdul Aziz Butt, and the claims the record does not support."
+>
+  <Prose>
+    <h1 class="role-title">Sources</h1>
+    <p class="role-lede">What was read, and what was not found.</p>
+    <p>
+      The English name on this site is Butt, the spelling the family uses. Records also print Bhat and Batt.
+      The University Calendar prints Prof. Abdul Aziz, with no surname. The Urdu name is set as
+      <span lang="ur" dir="rtl">{site.urduName}</span>
+      until a signature, a letter or a gravestone confirms it. Revised {site.revision}.
+    </p>
+
+    <div class="source-list">
+      {
+        sourceKinds.map((kind) => (
+          <section class="source-group">
+            <h2>{kind}</h2>
+            {sources
+              .filter((source) => source.kind === kind)
+              .map((source) => (
+                <article class="source" id={source.id}>
+                  <p class="source-title">
+                    {source.author}, <cite>{source.title}</cite>
+                  </p>
+                  <p class="source-meta">
+                    {source.year}. {source.independence}
+                  </p>
+                  <p>{source.read}</p>
+                  {source.url && (
+                    <p>
+                      <a href={source.url}>{source.url}</a>
+                    </p>
+                  )}
+                </article>
+              ))}
+          </section>
+        ))
+      }
+    </div>
+
+    <section class="source-group">
+      <h2>What the record does not show</h2>
+      <p>
+        Checked, and not used on this site. The date of the check is {site.revision}.
+      </p>
+      <ul class="plain-list">
+        {notFound.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="source-group">
+      <h2>Records that would settle what is open</h2>
+      <ul class="plain-list">
+        {openRecords.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+  </Prose>
+</BaseLayout>

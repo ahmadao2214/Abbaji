@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://abdulazizabhat.com',
+  site: 'https://abbaji.vercel.app',
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -14,6 +14,9 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   compressHTML: true,
+  redirects: {
+    '/legacy': '/biography#family',
+  },
   image: {
     domains: [],
     remotePatterns: [],

@@ -2,7 +2,7 @@
   "name": "abbaji-memorial",
   "type": "module",
   "version": "1.0.0",
-  "description": "Memorial website for Abdul Aziz Butt - Founding Father of University of Kashmir",
+  "description": "Memorial website for Abdul Aziz Butt, Abbaji, professor and Registrar of the University of Jammu and Kashmir.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

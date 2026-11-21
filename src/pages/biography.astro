@@ -1,433 +1,360 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Card from '../components/Card.astro';
-import SectionDivider from '../components/SectionDivider.astro';
-import KashidaBorder from '../components/KashidaBorder.astro';
-import ChinaLeaf from '../components/ChinaLeaf.astro';
-import ShikaraIcon from '../components/ShikaraIcon.astro';
+import Prose from '../components/Prose.astro';
+import Chapter from '../components/Chapter.astro';
+import Entry from '../components/Entry.astro';
+import Note from '../components/Note.astro';
+import Memory from '../components/Memory.astro';
+import CivilListLine from '../components/CivilListLine.astro';
+import Inscription from '../components/Inscription.astro';
+import Ref from '../components/Ref.astro';
+import { site } from '../data/site';
 ---
 
 <BaseLayout
-  title="Biography - Abdul Aziz Butt"
-  description="The extraordinary life story of Abdul Aziz Butt (1916-2016), from self-taught scholar in Bhalessa village to founding father of the University of Kashmir."
+  title="The life of Abdul Aziz Butt"
+  description="The life of Abdul Aziz Butt, Abbaji (1916–2016): from Kilhotran in Bhalessa, through 1947, to the schools, colleges and university of Jammu and Kashmir."
 >
-  <Hero
-    variant="page"
-    title="The Life of Abdul Aziz Butt"
-    subtitle="A Journey of Resilience, Education, and Transformation"
-  />
+  <Prose>
+    <h1 class="role-title">The life of Abdul Aziz Butt</h1>
+    <p class="role-lede">Abbaji, to his family</p>
 
-  <!-- Early Life Section -->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center mb-8">
-          <ChinaLeaf size="md" color="burgundy" class="mr-4" />
-          <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-0">
-            Early Life in Bhalessa (1916-1930s)
-          </h2>
-        </div>
+    <CivilListLine>
+      Entry 19, in the Kashmir Education Service, in the grade that includes headmasters. 26-7-1916 is his
+      date of birth. The later figures are Bikrami. 23-2-1998 is his entry into service, about May or June
+      1941. 17-12-2001 is a promotion, about March 1945. Both conversions are approximate.
+    </CivilListLine>
 
-        <KashidaBorder variant="vine" height="50px" class="mb-8 opacity-30" />
+    <Chapter id="kilhotran" years="1916–1938" place="Kilhotran, Bhalessa and Bhaderwah" />
 
-        <div class="space-y-6 text-lg text-kashmir-lake-blue/90 leading-relaxed">
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          Abdul Aziz Butt was born on 26 July 1916 at Kilhotran, a village in Bhalessa, in what is now Doda
+          district. Education was rare there.
+          <Ref n={1} />
+        </p>
+        <Note slot="notes" n={1} status="record">
+          Civil List No. 127, and the same date in the lists of 1947 and about 1953. Two later books give 26 July 1916 as well.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <Memory>
           <p>
-            <strong>Abdul Aziz Butt</strong> was born in <strong>1916</strong> in the small village of
-            <strong>Bhalessa, Kashmir</strong>—a place where education was rare, and the future seemed
-            predetermined by one's birthplace.
+            His father’s name, as the family remembers it, was Muhammad Sultan.
+            <Ref n={2} />
           </p>
+        </Memory>
+        <Note slot="notes" n={2} status="family-memory">
+          Recorded by the family on 11 November 2026. A father’s name printed in one local history is not used here.
+        </Note>
+      </Entry>
 
-          <div class="kashmir-card p-6 my-8 bg-kashmir-cream/50">
-            <p class="text-base italic mb-0">
-              In Bhalessa, only <strong>14 people</strong> out of the entire village became educated during
-              his generation. Among them were Abdul Aziz Butt and <strong>Ghulam Rasool Azad</strong>.
-              To be educated in Bhalessa was to be extraordinary.
-            </p>
-          </div>
+      <Entry>
+        <p>
+          He went to the primary school at Kilhotran, and was in the first group of boys from Bhalessa admitted
+          to the school at Bhaderwah. Ghulam Rasool Azad was his classmate from childhood to the tenth class.
+          A local history calls him the first M.A. of this place.
+          <Ref n={3} />
+        </p>
+        <p>His early life ran between Bhalessa and Bhaderwah.</p>
+        <Note slot="notes" n={3} status="own-account">
+          Bashir Bhadarwahi, <cite>The History and Culture of Bhadarwah</cite> (2023), pp. 671 and 774–775.
+        </Note>
+      </Entry>
 
+      <Entry>
+        <Memory>
+          <p>He was the first person from his village to be educated.</p>
           <p>
-            What made Abdul Aziz even more remarkable was that he was <strong>self-taught</strong>.
-            <em>[Note: Stories suggest he traveled vast distances and shut himself in rooms to educate himself - details to be corroborated]</em>
-            In a time and place where formal education was scarce, he created his own path through sheer determination.
+            The family remembers that he taught himself to read, and that he travelled long distances and shut
+            himself away in rooms to study.
+            <Ref n={4} />
           </p>
+        </Memory>
+        <Note slot="notes" n={4} status="family-memory">
+          The family corrected an earlier count of fourteen educated people in the village. The count is not used.
+        </Note>
+      </Entry>
 
+      <Entry>
+        <p>
+          In 1938 he took his B.A. at Prince of Wales College, Jammu, now Government Gandhi Memorial Science College.
+          <Ref n={5} />
+        </p>
+        <Note slot="notes" n={5} status="own-account">
+          The Bhadarwah history. No opened record shows him as a student of the Bhaderwah degree college, which did not yet exist.
+        </Note>
+      </Entry>
+    </div>
+
+    <Chapter id="aligarh" years="1938–1947" place="Aligarh, Kishtwar and Mirpur" />
+
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          After 1938 he took an M.A. in Arabic and an LL.B. at Aligarh Muslim University. Those degrees are his
+          own account. He also took the B.T., a teaching degree, and Munshi Fazil in the first class.
+          <Ref n={6} />
+        </p>
+        <Note slot="notes" n={6} status="own-account">
+          The Bhadarwah history, drawing on what he told its author. No university register was opened.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <p>
+          He joined the state’s education service in 1941 as Second Teacher at Kishtwar High School. That was
+          the start of thirty-three years in the service.
+          <Ref n={7} />
+        </p>
+        <Note slot="notes" n={7} status="record">
+          Civil List No. 127 dates his entry into service to about May or June 1941. The Bhadarwah history names the Kishtwar post.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <p>
+          He rose to be a headmaster. In his own account, he was Head Master of Hari Singh High School.
+          <Ref n={8} />
+        </p>
+        <Note slot="notes" n={8} status="own-account">
+          Khalid Bashir Ahmad, from an interview in December 2011. A 1947 list may place him elsewhere. That reading is uncertain, and is not used here.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <p>
+          One of his early postings was as a lecturer at the Intermediate College in Mirpur.
+          <Ref n={9} />
+        </p>
+        <Note slot="notes" n={9} status="own-account">
+          The Bhadarwah history. A lectureship at Prince of Wales College, Jammu, has not been found in the opened records.
+        </Note>
+      </Entry>
+    </div>
+
+    <Chapter id="jammu-1947" years="November 1947" place="Jammu" space="wide" />
+
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          In November 1947, during the killings in Jammu, Abdul Aziz Butt and his family were caught in the
+          violence. He was 31, a young father and a teacher.
+        </p>
+        <Memory>
           <p>
-            His family lived between <strong>Bhalessa and Bhaderwa</strong> in Kashmir. Later, he would spend
-            a significant portion of his life in <strong>Srinagar</strong>, where his immense impact on education
-            would unfold through his contributions to the University of Kashmir.
+            In November 1947 the family was put on a bus in Jammu that they were told would take them to safety.
+            It went another way, into an ambush. He was holding their daughter, Masooda, when he was shot. The
+            bullet killed her and took his left thumb. His wife, Saideh, was wounded in the head and survived.
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <SectionDivider icon="leaf" />
-
-  <!-- Education Section -->
-  <section class="section-padding bg-gradient-to-b from-kashmir-cream to-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center mb-8">
-          <ShikaraIcon size="md" variant="ornate" color="blue" class="mr-4" />
-          <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-0">
-            The Journey of Education
-          </h2>
-        </div>
-
-        <KashidaBorder variant="floral" height="50px" class="mb-8 opacity-30" />
-
-        <div class="space-y-8">
-          <Card title="Early Education" variant="bordered" showLeafWatermark={true}>
-            <p>
-              Abdul Aziz began his formal education at the <strong>Bhalessa village school</strong>, though much
-              of his early learning was self-directed. His natural ability to teach himself would serve him
-              throughout his life.
-            </p>
-          </Card>
-
-          <Card title="Higher Education in Kashmir & Jammu" variant="bordered" showLeafWatermark={true}>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
-                <span><strong>Bhaderwa Degree College, Kashmir</strong> - Undergraduate studies</span>
-              </li>
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
-                <span><strong>GGM Science College, Jammu</strong> - Advanced studies and early teaching career</span>
-              </li>
-            </ul>
-          </Card>
-
-          <Card title="Professional Degrees" variant="bordered" showLeafWatermark={true}>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
-                <span><strong>LLB (Bachelor of Laws)</strong> from <strong>Aligarh Muslim University</strong> - One of India's most prestigious institutions</span>
-              </li>
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-2 mt-1 flex-shrink-0" />
-                <span><strong>PhD in Education</strong> from <strong>University of Kashmir</strong> - The very institution he helped found</span>
-              </li>
-            </ul>
-          </Card>
-
-          <div class="kashmir-card p-8 dal-lake-bg text-white">
-            <h3 class="text-2xl font-serif font-bold mb-4">Academic Specializations</h3>
-            <p class="mb-4">
-              Abdul Aziz Butt became a distinguished scholar in:
-            </p>
-            <ul class="space-y-2">
-              <li>✦ <strong>Education & Pedagogy</strong> (PhD, Professor)</li>
-              <li>✦ <strong>Law</strong> (LLB from Aligarh Muslim University)</li>
-              <li>✦ <strong>Social Work & Community Development</strong> (lifelong dedication)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <SectionDivider icon="shikara" />
-
-  <!-- Early Career Section -->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-          Early Career (Pre-1947)
-        </h2>
-
-        <KashidaBorder variant="geometric" height="50px" class="mb-8 opacity-30" />
-
-        <div class="space-y-8">
-          <Card title="Principal - Hari Singh High School" variant="bordered">
-            <p>
-              Before Partition, Abdul Aziz served as the <strong>Principal of Hari Singh High School</strong>,
-              demonstrating leadership and educational vision at a young age. He was shaping young minds and
-              building educational institutions even then.
-            </p>
-          </Card>
-
-          <Card title="Lecturer - GGM Science College, Jammu" variant="bordered">
-            <p>
-              He also taught as a <strong>Lecturer at GGM Science College in Jammu</strong>, bringing his
-              expertise to higher education. This position would place him in Jammu during one of the darkest
-              moments of his life.
-            </p>
-          </Card>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <SectionDivider icon="leaf" />
-
-  <!-- 1947 Tragedy Section -->
-  <section class="section-padding bg-kashmir-stone-grey/10">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-          1947: Tragedy and Survival
-        </h2>
-
-        <KashidaBorder variant="floral" height="50px" class="mb-8 opacity-40" />
-
-        <div class="kashmir-card p-8 border-l-8 border-kashmir-burgundy">
-          <p class="text-lg text-kashmir-lake-blue/90 leading-relaxed mb-6">
-            In <strong>1947</strong>, during the horrific violence of Partition, Abdul Aziz Butt and his
-            family were caught in the <strong>Jammu Massacre</strong>. He was <strong>31 years old</strong>,
-            a young father and educator with his whole life ahead of him.
+          <p>
+            He lived without his left thumb for the rest of his life, nearly seventy years.
+            <Ref n={10} />
+            <Ref n={11} />
           </p>
-
-          <div class="bg-white/50 p-6 rounded-lg mb-6">
-            <h4 class="font-serif font-bold text-kashmir-burgundy mb-3">What Happened:</h4>
-            <ul class="space-y-3 text-kashmir-lake-blue/90">
-              <li>• The family was told they were being taken to safety on a bus</li>
-              <li>• The bus went in a different direction than promised—into an ambush</li>
-              <li>• He was shot while holding his infant daughter, <strong>Masooda</strong></li>
-              <li>• The bullet passed through Masooda and blew off his <strong>left thumb</strong></li>
-              <li>• Baby Masooda died from her wounds</li>
-              <li>• His wife, <strong>Saideh</strong>, was injured with a head wound but survived</li>
-              <li>• After the massacre, he eventually migrated to Srinagar</li>
-              <li>• He lost his left thumb permanently—a reminder he carried for <strong>69 years</strong></li>
-            </ul>
-          </div>
-
-
-          <div class="bg-kashmir-burgundy text-white p-6 rounded-lg">
-            <h4 class="font-serif font-bold text-2xl mb-3">One Year Later...</h4>
-            <p class="text-lg">
-              In <strong>1948</strong>, just one year after this devastating loss, Abdul Aziz Butt became
-              a <strong>founding faculty member of the University of Kashmir</strong>.
-            </p>
-            <p class="mt-4 text-kashmir-gold font-semibold">
-              <em>[Note: Timeline between tragedy and university founding to be verified]</em>
-            </p>
-          </div>
-        </div>
-      </div>
+        </Memory>
+        <Note slot="notes" n={10} status="family-memory">
+          The daughter’s name, the thumb, and Saideh’s wound, as the family remembers them. Her age is not stated.
+        </Note>
+        <Note slot="notes" n={11} status="record">
+          The Kashmir Life obituary of 8 August 2016 says a daughter was killed and that his hand was damaged. It does not give her name, or say that the thumb was lost.
+        </Note>
+      </Entry>
     </div>
-  </section>
 
-  <SectionDivider icon="shikara" />
+    <Chapter id="kashmir" years="1948–1962" place="Anantnag, Bhaderwah and Srinagar" />
 
-  <!-- University of Kashmir Section -->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-          Building the University "From the Rock" (1948)
-        </h2>
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          He went back to work in the schools, now in Kashmir, as an Inspector of Schools at Anantnag. After
+          1947 his work moved to Kashmir, and he made his home in Srinagar.
+          <Ref n={12} />
+        </p>
+        <Note slot="notes" n={12} status="own-account">
+          Khalid Bashir Ahmad, and the Bhadarwah history. The move to Srinagar is not a founding of the university.
+        </Note>
+      </Entry>
 
-        <div class="text-center mb-12">
-          <p class="text-xl text-kashmir-lake-blue/80 italic">
-            "We built it from the rock—literally and figuratively."
+      <Entry>
+        <p>
+          In 1956 he completed a one-year training course in England, with Ghulam Rasool Azad and others.
+          <Ref n={13} />
+        </p>
+        <Note slot="notes" n={13} status="own-account">
+          The Bhadarwah history. The course lasted a year. It is a separate fact from Oxford, and does not explain it.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <Memory>
+          <p>
+            The family remembers him as a travelling scholar at Oxford.
+            <Ref n={14} />
           </p>
-        </div>
+        </Memory>
+        <Note slot="notes" n={14} status="family-memory">
+          No year, college or certificate has been found. The memory is not dated, and it is not a guest lectureship.
+        </Note>
+      </Entry>
 
-        <div class="space-y-8">
-          <div class="kashmir-card p-8 bg-gradient-to-br from-kashmir-burgundy to-kashmir-crimson text-white">
-            <h3 class="text-3xl font-serif font-bold mb-6">The Founding (1948)</h3>
-            <p class="text-lg mb-4">
-              In <strong>1948</strong>, Abdul Aziz Butt became one of the <strong>founding faculty members</strong>
-              of the <strong>University of Kashmir</strong>. This wasn't just a ceremonial role—he was there at
-              the very beginning, helping to create Kashmir's premier institution of higher learning.
-            </p>
-            <p class="text-lg">
-              The phrase <em>"from the rock"</em> had two meanings:
-            </p>
-            <ul class="mt-4 space-y-2 text-white/90">
-              <li><strong>Literally:</strong> He participated in the physical construction of the university buildings</li>
-              <li><strong>Figuratively:</strong> He developed the curriculum for the Education department from scratch</li>
-            </ul>
-          </div>
-
-          <Card title="His Roles at the University" variant="bordered">
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <strong class="text-kashmir-burgundy">Professor of Education</strong>
-                  <p class="text-sm text-kashmir-lake-blue/70 mt-1">PhD in Education, teaching pedagogy to generations of future educators</p>
-                </div>
-              </li>
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <strong class="text-kashmir-burgundy">Social Worker</strong>
-                  <p class="text-sm text-kashmir-lake-blue/70 mt-1">Pioneering social work education in Kashmir</p>
-                </div>
-              </li>
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <strong class="text-kashmir-burgundy">Dean of Education</strong>
-                  <p class="text-sm text-kashmir-lake-blue/70 mt-1">Leading the Education department and shaping pedagogy</p>
-                </div>
-              </li>
-              <li class="flex items-start">
-                <ChinaLeaf size="sm" color="outline" class="mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <strong class="text-kashmir-burgundy">Registrar</strong>
-                  <p class="text-sm text-kashmir-lake-blue/70 mt-1">Administrative leadership of the entire university</p>
-                </div>
-              </li>
-            </ul>
-          </Card>
-        </div>
-      </div>
+      <Entry>
+        <p>
+          He was Principal of the degree college at Bhaderwah, and later of S.P. College, Srinagar. He was
+          Secretary of the Jammu and Kashmir Board of School Education, and Deputy Director of Education in Kashmir.
+          <Ref n={15} />
+        </p>
+        <p>
+          In thirty-three years in the state’s education service, from 1941 to 1974, he was a teacher, a
+          headmaster, an Inspector of Schools, a college principal, Secretary of the Board of School Education
+          and Deputy Director of Education in Kashmir.
+        </p>
+        <Note slot="notes" n={15} status="own-account">
+          The Bhadarwah history and Khalid Bashir Ahmad. One local book calls him Chairman of the Board. Secretary is the title used here. The Bhaderwah college opened in the mid-1950s. He was its principal, not its student.
+        </Note>
+      </Entry>
     </div>
-  </section>
 
-  <SectionDivider icon="leaf" />
+    <Chapter id="hazratbal" years="1962–1971" place="Hazratbal" />
 
-  <!-- International Recognition Section -->
-  <section class="section-padding bg-kashmir-cream">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-          International Recognition <em class="text-base text-kashmir-lake-blue/60">[To be corroborated]</em>
-        </h2>
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          The university began in 1948 as an examining body. By 1962 it had teaching departments and a campus at Hazratbal.
+          <Ref n={16} />
+        </p>
+        <Note slot="notes" n={16} status="record">
+          Inaugurated on 2 November 1948, after the state was cut off from Punjab University at Lahore. The university’s later account dates teaching departments to 1956. He was not on a founding faculty.
+        </Note>
+      </Entry>
 
-        <KashidaBorder variant="floral" height="60px" class="mb-12 opacity-40" />
+      <Entry>
+        <p>
+          He was a professor at the university and served as its Registrar from September 1962 to 1971: Registrar
+          of the University of Jammu and Kashmir and, after the university was divided in 1969, of the University
+          of Kashmir.
+        </p>
+        <p>
+          The university’s printed list of its Registrars records him as “4. Prof. Abdul Aziz — Sept1962 – 1971.”
+          The same list places Prof. A. S. Dhar immediately before him and Prof. M. A. Chishti immediately after.
+          <Ref n={17} />
+        </p>
+        <Note slot="notes" n={17} status="record">
+          <cite>University Calendar 2010</cite>, Vol. I, p. xix, read from the page image. The line has no surname. The books and the obituary are what join it to Abdul Aziz Butt of Kilhotran. The family knows him as a professor there. No paper yet names his department.
+        </Note>
+      </Entry>
 
-        <div class="mughal-grid gap-8">
-          <Card title="Oxford University, UK" variant="gradient">
-            <div class="flex items-center justify-center mb-4">
-              <ShikaraIcon size="lg" variant="ornate" color="multi" />
-            </div>
-            <p class="text-white/90 mb-4">
-              Abdul Aziz Butt served as a <strong>Guest Lecturer at Oxford University</strong>, one of the
-              world's most prestigious academic institutions.
-            </p>
-            <p class="text-white/80 text-sm">
-              From a village in Kashmir to the halls of Oxford—an extraordinary journey of academic achievement.
-            </p>
-          </Card>
-
-          <Card title="Warwick University, UK" variant="gradient">
-            <div class="flex items-center justify-center mb-4">
-              <ShikaraIcon size="lg" variant="ornate" color="multi" />
-            </div>
-            <p class="text-white/90 mb-4">
-              He also lectured at <strong>Warwick University</strong>, sharing his expertise in education and
-              social work with British academics and students.
-            </p>
-            <p class="text-white/80 text-sm">
-              His knowledge and perspective were valued on the international stage.
-            </p>
-          </Card>
-        </div>
-
-      </div>
+      <Entry>
+        <p>
+          Some accounts end the first part of that tenure in 1969, the year the university was divided. One
+          obituary says he left in 1966. The Calendar keeps him in the list until 1971, and that is the span given here.
+          <Ref n={18} />
+        </p>
+        <p>
+          As Registrar he kept the university’s records and served as secretary to its councils and faculties,
+          through its reorganisation in 1965 and its division in 1969.
+        </p>
+        <Note slot="notes" n={18} status="record">
+          The 1966 date is the Kashmir Life obituary. The 1969 date is where some books divide the old university from the new. The duties are those of the Registrar’s office, not a separate diary of his days.
+        </Note>
+      </Entry>
     </div>
-  </section>
 
-  <SectionDivider icon="shikara" />
+    <Chapter id="sopore" years="1974–1986" place="Sopore and Jammu" />
 
-  <!-- Later Life & Legacy Section -->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-bold text-kashmir-burgundy mb-8 text-center">
-          A Century of Life (1916-2016)
-        </h2>
-
-        <div class="text-center mb-12">
-          <div class="flex justify-center space-x-4 mb-6">
-            <ChinaLeaf size="lg" color="burgundy" animate={true} />
-            <ChinaLeaf size="lg" color="gold" animate={true} />
-            <ChinaLeaf size="lg" color="crimson" animate={true} />
-          </div>
-          <p class="text-2xl font-serif text-kashmir-burgundy mb-2">100 Years</p>
-          <p class="text-lg text-kashmir-lake-blue/70">
-            Like the ancient chinar trees of Kashmir, he stood for a century
-          </p>
-        </div>
-
-        <div class="kashmir-card p-8 bg-kashmir-cream border-l-8 border-kashmir-gold mb-8">
-          <h3 class="text-xl font-serif font-bold text-kashmir-burgundy mb-4">The Man Behind the Achievement</h3>
-          <p class="text-lg text-kashmir-lake-blue/90 italic mb-4">
-            "Ever-smiling, soft spoken, meticulously dressed and a gentleman to the core, prominent educationist Master Abdul Aziz Butt."
-          </p>
-          <p class="text-lg text-kashmir-lake-blue/90 italic mb-4">
-            "Honest, truthful, upright and a spirited social worker."
-          </p>
-          <p class="text-sm text-kashmir-lake-blue/60">
-            — Contemporary accounts of Abdul Aziz Butt
-          </p>
-        </div>
-
-        <div class="space-y-8">
-          <Card title="Family Man" variant="bordered" showLeafWatermark={true}>
-            <p class="mb-4">
-              Abdul Aziz and his wife Saideh raised <strong>six children</strong> together:
-            </p>
-            <ul class="space-y-2 text-sm">
-              <li>1. <strong>Masooda</strong> (daughter) - Died as infant in 1947</li>
-              <li>2. <strong>Yasmeen</strong> (daughter)</li>
-              <li>3. <strong>Altaf</strong> (son) - Civil Engineer</li>
-              <li>4. <strong>Javaid</strong> (son) - Pilot</li>
-              <li>5. <strong>Shaheen</strong> (daughter)</li>
-              <li>6. <strong>Afzal</strong> (son, born 1955) - General Surgeon</li>
-            </ul>
-          </Card>
-
-          <Card title="Social Worker Throughout" variant="bordered">
-            <p>
-              Beyond his academic roles, Abdul Aziz Butt dedicated himself to <strong>social work</strong>
-              throughout his life. He believed education wasn't just about classrooms—it was about serving
-              communities and lifting people up.
-            </p>
-          </Card>
-
-          <div class="kashmir-card p-8 dal-lake-bg text-white">
-            <h3 class="text-3xl font-serif font-bold mb-4">His Final Years</h3>
-            <p class="text-lg mb-4">
-              Abdul Aziz Butt lived to be <strong>100 years old</strong>, passing away in <strong>2016</strong>.
-              He witnessed a full century of Kashmir's history, from British colonial rule through independence,
-              partition, and into the modern era.
-            </p>
-            <p class="text-white/90">
-              He carried the scar of 1947—his missing left thumb—for <strong>69 years</strong>. But he also
-              carried the pride of having built an institution that would educate <strong>thousands</strong>.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          After he retired in 1974, he was Principal of the Muslim Educational Trust’s College of Education at
+          Sopore until 1981. In 1986 he laid the foundation of the College of Education at the Model Institute
+          of Education, Jammu.
+          <Ref n={19} />
+        </p>
+        <Note slot="notes" n={19} status="own-account">
+          Khalid Bashir Ahmad and <cite>Bhalessa</cite> give 1974–1981 at Sopore. The Bhadarwah history says “the next five years”, and that in 1986 he became adviser to the college’s director. The longer Sopore span is the one used here.
+        </Note>
+      </Entry>
     </div>
-  </section>
 
-  <SectionDivider icon="leaf" />
+    <Chapter id="later" years="1986–2016" place="Gogjibagh and Jammu" />
 
-  <!-- Reflection Section -->
-  <section class="section-padding-sm bg-gradient-to-b from-kashmir-cream to-white">
-    <div class="container-custom">
-      <div class="max-w-3xl mx-auto text-center">
-        <blockquote class="p-12 bg-white rounded-lg shadow-2xl border-l-8 border-kashmir-burgundy">
-          <p class="text-2xl md:text-3xl text-kashmir-lake-blue italic leading-relaxed mb-6">
-            "Sink your differences and Cement your relationships."
-          </p>
-          <cite class="text-lg text-kashmir-burgundy font-semibold not-italic">
-            — Abdul Aziz Butt
-          </cite>
-          <div class="flex justify-center space-x-3 mt-8">
-            <ChinaLeaf size="md" color="burgundy" />
-            <ChinaLeaf size="md" color="gold" />
-            <ChinaLeaf size="md" color="burgundy" />
-          </div>
-        </blockquote>
+    <div class="prose-stack">
+      <Entry>
+        <p>
+          He lived at Gogjibagh in Srinagar. In February 2006 he joined a gathering in Jammu to honour Ghulam Nabi
+          Azad. In December 2011 he gave an interview to the writer Khalid Bashir Ahmad.
+          <Ref n={20} />
+        </p>
+        <Note slot="notes" n={20} status="record">
+          Gogjibagh is in the Kashmir Life obituary. The 2006 gathering is in the Bhadarwah history, which dates it 8 February. The interview is Khalid Bashir Ahmad’s, taken in December 2011.
+        </Note>
+      </Entry>
 
-        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="/legacy" class="btn-primary inline-block no-underline">
-            Explore His Legacy
-          </a>
-          <a href="/timeline" class="btn-secondary inline-block no-underline">
-            View Full Timeline
-          </a>
-        </div>
-      </div>
+      <Entry>
+        <p>
+          He died in Jammu on 7 August 2016, at the age of 100. He had lived through the last decades of the
+          princely state, through 1947, and through everything after.
+          <Ref n={21} />
+        </p>
+        <p>
+          He carried the loss of 1947, and his missing thumb, for nearly seventy years, and gave much of that
+          time to schools, colleges and teachers.
+        </p>
+        <p>Like the chinars of Kashmir, he stood for a hundred years.</p>
+        <Note slot="notes" n={21} status="record">
+          Khalid Bashir Ahmad: he died on 7 August 2016, twelve days after completing 100 years. The Kashmir Life headline says 98. The day was a Sunday, and the two accounts agree on that. The age used here is 100.
+        </Note>
+      </Entry>
     </div>
-  </section>
+
+    <Chapter id="family" years="Family" place="His children" />
+
+    <div class="prose-stack">
+      <Entry>
+        <p>Abdul Aziz and Saideh had six children.</p>
+        <p>
+          An obituary says he was survived by three sons and three daughters. It names Javid Ahmad, a pilot, and
+          Altaf Ahmad, an engineer.
+          <Ref n={22} />
+        </p>
+        <Note slot="notes" n={22} status="record">
+          Kashmir Life, 8 August 2016, from Jalal Ud Din Shah. The family spells the pilot’s name Javaid.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <Memory>
+          <p>
+            Masooda, a daughter, was lost in November 1947. The family also names Yasmeen and Shaheen, daughters;
+            Altaf, a civil engineer; Javaid, a pilot; and Afzal, born in 1955, a general surgeon.
+            <Ref n={23} />
+          </p>
+        </Memory>
+        <Note slot="notes" n={23} status="family-memory">
+          The names beyond the obituary, and Afzal’s birth year, are the family’s. One book prints his wife’s name as Syeda. This site uses Saideh.
+        </Note>
+      </Entry>
+
+      <Entry>
+        <Memory>
+          <p>
+            Outside his posts, he worked with young people all his life. He believed education was not only about classrooms.
+          </p>
+          <p>
+            The family remembers this as his line.
+            <q>{site.saying}</q>
+            <Ref n={24} />
+          </p>
+        </Memory>
+        <Note slot="notes" n={24} status="family-memory">
+          The line is kept as the family says it, including the capital C in Cement. It has not been found in a published source.
+        </Note>
+      </Entry>
+    </div>
+
+    <Inscription>{site.birth} – {site.death}</Inscription>
+    <p class="next-link"><a href="/timeline">Next: the register</a>.</p>
+  </Prose>
 </BaseLayout>
